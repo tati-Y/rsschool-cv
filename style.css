@@ -10,10 +10,48 @@ h2 {
 
 h3 {
   color: black;
-  font: normal 18px Verdana, sans-serif;
+  font: normal bold 16px Verdana, sans-serif;
 }
 
 ul li {
   color: black;
-  font: normal 14px Verdana, sans-serif;
+  font: normal 16px Verdana, sans-serif;
+  line-height: 150%;
+}
+
+header {
+  background: rgb(235, 243, 243) right bottom;
+  padding: 20px;
+  margin: 0 20px;
+  height: 350px;
+}
+
+footer {
+  background-color: rgb(235, 243, 243);
+  /*background-image: url("img/27.jpg");*/
+  padding: 20px;
+  margin: 0 20px;
+  height: 150px;
+}
+
+main {
+  /*background: rgba(187, 218, 216, 0.7);*/
+  padding: 20px;
+  margin: 0;
+  
+}
+
+.info {
+  height: 250px;
+  padding: 10px 20px;
+  margin: 5px 0;
+  background: rgba(187, 218, 216, 0.7);
+}
+
+.thank {
+  text-align: center;
+  background-color:#fff;
+  padding: 5px;
+  font: bold 16px Verdana, sans-serif;
+  margin: 0 20px 5px 20px;
 }
