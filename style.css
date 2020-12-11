@@ -1,0 +1,19 @@
+h1 {
+  color: black;
+  font: normal bold 30px Verdana, sans-serif;
+}
+
+h2 {
+  color: black;
+  font: normal 24px Verdana, sans-serif;
+}
+
+h3 {
+  color: black;
+  font: normal 18px Verdana, sans-serif;
+}
+
+ul li {
+  color: black;
+  font: normal 14px Verdana, sans-serif;
+}
