@@ -20,23 +20,23 @@ ul li {
 }
 
 header {
-  background: rgb(235, 243, 243) right bottom;
+  background: #fff right bottom;
   padding: 20px;
-  margin: 0 20px;
+  margin: 0;
   height: 350px;
 }
 
 footer {
-  background-color: rgb(235, 243, 243);
+  background-color: #fff;
   /*background-image: url("img/27.jpg");*/
   padding: 20px;
-  margin: 0 20px;
-  height: 150px;
+  margin: 0;
+  height: 100px;
 }
 
 main {
   /*background: rgba(187, 218, 216, 0.7);*/
-  padding: 20px;
+  padding: 0;
   margin: 0;
   
 }
@@ -45,13 +45,57 @@ main {
   height: 250px;
   padding: 10px 20px;
   margin: 5px 0;
-  background: rgba(187, 218, 216, 0.7);
+  background: rgba(187, 218, 216, 0.5);
 }
+
+footer a {
+  color: black;
+  font: normal bold 16px Verdana, sans-serif;
+  text-decoration: none;
+ 
+}
+
+a[href*="git"]::before {
+  content: '  ';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("img/Github1.png");
+}
+
+a[href*="@"]::before {
+  content: '  ';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("img/email.png");
+}
+
+a[href*="+375"]::before {
+  content: '  ';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("img/phone.png");
+}
+
+a:hover {
+  color: darkcyan;
+}
+
+@keyframes color-change {
+0% {color:darkslategray;}
+
+100% {color:rgb(215, 223, 222);}
+
+}
+
 
 .thank {
   text-align: center;
   background-color:#fff;
   padding: 5px;
-  font: bold 16px Verdana, sans-serif;
-  margin: 0 20px 5px 20px;
+  font: bold 14px Verdana, sans-serif;
+  margin: 0;
+  animation: color-change 3s infinite;
 }
