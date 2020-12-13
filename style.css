@@ -1,3 +1,5 @@
+/*text and color styles*/
+
 h1 {
   color: black;
   font: normal bold 30px Verdana, sans-serif;
@@ -23,13 +25,13 @@ header {
   background: #fff right bottom;
   padding: 20px;
   margin: 0;
-  height: 350px;
+  height: 150px;
 }
 
 footer {
   background-color: #fff;
   /*background-image: url("img/27.jpg");*/
-  padding: 20px;
+  padding: 10px;
   margin: 0;
   height: 100px;
 }
@@ -46,6 +48,7 @@ main {
   padding: 10px 20px;
   margin: 5px 0;
   background: rgba(187, 218, 216, 0.5);
+  
 }
 
 footer a {
@@ -101,4 +104,44 @@ a:hover {
   font: bold 14px Verdana, sans-serif;
   margin: 0;
   animation: color-change 3s infinite;
+}
+
+/*flex*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 760px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+main {
+    display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  position: relative;
+  flex: 1;
+  flex-grow: 1;
+
+}
+
+.myname {
+  flex-grow: 3;
+}
+
+.info:hover {
+  transform: scale(50px, 50px);
 }
