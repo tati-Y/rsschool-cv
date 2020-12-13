@@ -42,7 +42,7 @@ main {
 }
 
 .info {
-  height: 250px;
+  height: 600px;
   padding: 10px 20px;
   margin: 5px 0;
   background: rgba(187, 218, 216, 0.5);
@@ -60,6 +60,7 @@ a[href*="git"]::before {
   display: inline-block;
   width: 20px;
   height: 20px;
+  margin: 0 5px;
   background-image: url("img/Github1.png");
 }
 
@@ -68,6 +69,7 @@ a[href*="@"]::before {
   display: inline-block;
   width: 20px;
   height: 20px;
+  margin: 0 5px;
   background-image: url("img/email.png");
 }
 
@@ -76,6 +78,7 @@ a[href*="+375"]::before {
   display: inline-block;
   width: 20px;
   height: 20px;
+  margin: 0 5px;
   background-image: url("img/phone.png");
 }
 
