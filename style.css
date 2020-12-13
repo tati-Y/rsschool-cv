@@ -44,10 +44,12 @@ main {
 }
 
 .info {
+  position: relative;
   height: 600px;
   padding: 10px 20px;
   margin: 5px 0;
   background: rgba(179, 244, 247, 0.2);
+  
   
 }
 
@@ -118,13 +120,14 @@ header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  background: radial-gradient(rgb(208, 245, 245) 1%, white 99%);
+  background: radial-gradient(rgb(232, 248, 248) 1%, white 99%);
 }
 
 main {
     display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 footer {
@@ -151,3 +154,4 @@ footer {
 footer {
   align-items: center;
 }
+
