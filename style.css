@@ -117,7 +117,8 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  
+  align-items: flex-start;
+  background: radial-gradient(rgb(214, 236, 235) 1%, white);
 }
 
 main {
@@ -131,17 +132,17 @@ footer {
   flex-direction: column;
 }
 
-img {
-  position: relative;
+.image {
   flex: 1;
   flex-grow: 1;
-
+  
 }
 
 .myname {
   flex-grow: 3;
 }
-
-.info:hover {
-  transform: scale(50px, 50px);
+  
+.contacts {
+  display: flex;
+  flex-direction: row;
 }
