@@ -113,14 +113,14 @@ a:hover {
 body {
   display: flex;
   flex-direction: column;
-  width: 1024px;
+  /*width: 1024px;*/
 }
 
 header {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  background: radial-gradient(rgb(178, 247, 247) 1%, white 99%);
+  background: radial-gradient(rgb(234, 247, 247) 1%, white 99%);
 }
 
 main {
@@ -128,6 +128,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: nowrap;
+  align-items: stretch;
 }
 
 footer {
@@ -157,7 +158,7 @@ footer {
 
 /*media*/
 
-@media only screen and (min-width : 320px) and (max-width : 480px) {
+@media only screen and (min-width : 240px) and (max-width : 640px) {
   
   body {
     width: 100%;
@@ -185,7 +186,7 @@ footer {
   }
   
   ul li {
-    font-size: 90%;
+    font-size: 85%;
     line-height: 150%;
   }
 
@@ -193,10 +194,11 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   height: 100%;
   width: 100%;
   margin: 0;
+  padding: 5px;
   }
 
   .contacts {
@@ -210,4 +212,42 @@ footer {
     height: 100%;
   }
 
+  .info {
+    height: 100%;
+    padding: 10px;
+    margin: 0;
+
+}
+
+@media only screen and (max-width : 1024px) {
+  
+  body {
+    width: 100%;
+  }
+
+  
+  h1 {
+    font-size: 150%;
+  }
+  
+  h2 {
+    font-size: 150%;
+  }
+  
+  h3 {
+    font-size: 100%;
+  }
+  
+  ul li {
+    font-size: 100%;
+    line-height: 150%;
+  }
+    
+}
+
+@media only screen and (min-width : 1024px)  {
+  
+  body {
+    width: 1024px;
+  }
 }
