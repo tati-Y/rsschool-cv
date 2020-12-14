@@ -2,4 +2,4 @@
 
 **My Resume:**
 
- https://tati-Y.github.io/rsschool-cv/
+ https://tati-Y.github.io/rsschool-cv/cv
