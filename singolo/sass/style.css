@@ -1,5 +1,29 @@
 html {
   font-size: 10px;
+  font-family: "Lato", Verdana, sans-serif;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../../fonts/Lato-Light.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(../../fonts/Lato-Bold.ttf);
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Lato";
+  src: url(../../fonts/Lato-Black.ttf);
+  font-style: normal;
+  font-weight: 900;
+}
+.wrapper {
+  max-width: 1020px;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
