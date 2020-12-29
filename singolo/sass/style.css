@@ -26,4 +26,32 @@ html {
   margin: 0;
 }
 
+.header {
+  background-color: #2D303A;
+  border-bottom: 6px solid #323746;
+  padding: 29px 40px 39px 40px;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo__name {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -3%;
+  color: #ffffff;
+}
+
+.logo__star {
+  display: inline-block;
+  font-size: 2.5rem;
+  color: #F06C64;
+}
+
 /*# sourceMappingURL=style.css.map */
