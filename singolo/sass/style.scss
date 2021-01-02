@@ -13,3 +13,6 @@
 @import "layout/footer";
 @import "layout/columns";
 
+@import "../../node_modules/normalize-scss/sass/normalize";
+@include normalize();
+

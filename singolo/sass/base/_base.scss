@@ -6,6 +6,7 @@ html {
 h2 {
   @include font ($size: 3rem, $weight: 900, $height: 36px);
   color: $color-title-services-portfolio;
+  margin: 0;
 }
 
 .services__description, .portfolio__description {
