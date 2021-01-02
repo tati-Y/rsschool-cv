@@ -21,6 +21,12 @@ html {
   font-family: "Lato", Verdana, sans-serif;
 }
 
+.slider {
+  background-color: #F06C64;
+  height: 594px;
+  border-bottom: 6px #EA676B;
+}
+
 .wrapper {
   max-width: 1020px;
   margin: auto;
