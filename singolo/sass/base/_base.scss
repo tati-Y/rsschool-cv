@@ -2,3 +2,13 @@ html {
   font-size: 10px;
   font-family: 'Lato', Verdana, sans-serif;
 }
+
+h2 {
+  @include font ($size: 3rem, $weight: 900, $height: 36px);
+  color: $color-title-services-portfolio;
+}
+
+.services__description, .portfolio__description {
+  @include font ($size: 1.8rem, $height: 30px);
+  color: $color-text-services-portfolio;
+}

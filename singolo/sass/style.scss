@@ -1,5 +1,6 @@
 @import "abstracts/constant";
 @import "abstracts/fonts";
+@import "abstracts/mixins";
 
 @import "base/base";
 
@@ -10,4 +11,5 @@
 @import "layout/services";
 @import "layout/portfolio";
 @import "layout/footer";
+@import "layout/columns";
 

@@ -21,10 +21,25 @@ html {
   font-family: "Lato", Verdana, sans-serif;
 }
 
+h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 36px;
+  color: #666D89;
+}
+
+.services__description, .portfolio__description {
+  font-size: 1.8rem;
+  font-weight: normal;
+  line-height: 30px;
+  color: #767E9E;
+}
+
 .slider {
   background-color: #F06C64;
   height: 594px;
-  border-bottom: 6px #EA676B;
+  border-bottom: 6px solid #EA676B;
+  margin: 0;
 }
 
 .wrapper {
@@ -103,11 +118,101 @@ html {
   color: #ffffff;
 }
 
-.dot-1::before {
+.dot-none::before {
   content: "";
   display: inline;
   padding: 0;
   font-size: 1.6rem;
+}
+
+.services {
+  background-color: #F2F2F2;
+  border-bottom: 6px solid #FFFFFF;
+  margin: 0;
+  padding: 59px 40px 52px 40px;
+}
+
+.services-item__title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 18px;
+  color: #666D89;
+  margin: 0;
+}
+
+.services-item__description {
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 22px;
+  color: #767E9E;
+  text-align: justify;
+  margin: 0;
+  overflow: hidden;
+}
+
+.services-item__icon {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: 60px 60px;
+  padding: 0;
+}
+
+.item-1 {
+  background-image: url(../img/services/services-item-1.svg);
+}
+
+.item-2 {
+  background-image: url(../img/services/services-item-2.svg);
+}
+
+.item-3 {
+  background-image: url(../img/services/services-item-3.svg);
+}
+
+.item-4 {
+  background-image: url(../img/services/services-item-4.svg);
+}
+
+.item-5 {
+  background-image: url(../img/services/services-item-5.svg);
+}
+
+.item-6 {
+  background-image: url(../img/services/services-item-6.svg);
+}
+
+.services-item {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.services-item__content {
+  flex-grow: 2;
+  padding: 0 0 0 20px;
+  justify-content: flex-start;
+}
+
+.portfolio {
+  background-color: #2D303A;
+  border-bottom: 6px solid #323746;
+  margin: 0;
+}
+
+.footer {
+  background-color: #2D303A;
+  margin: 0;
+}
+
+.layout-3-column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.layout-3-column > * {
+  flex-basis: 32%;
 }
 
 /*# sourceMappingURL=style.css.map */
