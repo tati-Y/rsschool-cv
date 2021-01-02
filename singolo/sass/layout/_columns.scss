@@ -1,3 +1,7 @@
 .layout-3-column {
   @include columns ($width: 300px);
 }
+
+.layout-4-column {
+  @include columns ($width: 23%);
+}

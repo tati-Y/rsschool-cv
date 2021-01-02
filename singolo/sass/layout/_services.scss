@@ -80,14 +80,14 @@
 }
 
 .services-item__title {
-  @include font ($size: 1.8rem, $weight: 900, $height: 18px);
+  @include font ($size: 1.8rem, $weight: 900, $height: 1.8rem);
   color: $color-title-services-portfolio;
   margin: 0;
   padding: 0 0 7px 0;
 }
 
 .services-item__description {
-  @include font ($size: 1.2rem, $height: 22px);
+  @include font ($size: 1.2rem, $height: 2.2rem);
   color: $color-text-services-portfolio;
   text-align: justify;
   margin: 0;

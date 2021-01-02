@@ -4,12 +4,12 @@ html {
 }
 
 h2 {
-  @include font ($size: 3rem, $weight: 900, $height: 36px);
+  @include font ($size: 3rem, $weight: 900, $height: 3.6rem);
   color: $color-title-services-portfolio;
   margin: 0;
 }
 
 .services__description, .portfolio__description {
-  @include font ($size: 1.8rem, $height: 30px);
+  @include font ($size: 1.8rem, $height: 3.0rem);
   color: $color-text-services-portfolio;
 }

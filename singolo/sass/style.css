@@ -24,7 +24,7 @@ html {
 h2 {
   font-size: 3rem;
   font-weight: 900;
-  line-height: 36px;
+  line-height: 3.6rem;
   color: #666D89;
   margin: 0;
 }
@@ -32,7 +32,7 @@ h2 {
 .services__description, .portfolio__description {
   font-size: 1.8rem;
   font-weight: normal;
-  line-height: 30px;
+  line-height: 3rem;
   color: #767E9E;
 }
 
@@ -198,7 +198,7 @@ h2 {
 .services-item__title {
   font-size: 1.8rem;
   font-weight: 900;
-  line-height: 18px;
+  line-height: 1.8rem;
   color: #666D89;
   margin: 0;
   padding: 0 0 7px 0;
@@ -207,7 +207,7 @@ h2 {
 .services-item__description {
   font-size: 1.2rem;
   font-weight: normal;
-  line-height: 22px;
+  line-height: 2.2rem;
   color: #767E9E;
   text-align: justify;
   margin: 0;
@@ -218,6 +218,100 @@ h2 {
   background-color: #2D303A;
   border-bottom: 6px solid #323746;
   margin: 0;
+}
+
+.portfolio__title {
+  margin: 0;
+  padding: 59px 44px 14px 40px;
+}
+
+.portfolio__description {
+  margin: 0;
+  padding: 0 44px 0 40px;
+}
+
+.portfolio__tags {
+  display: flex;
+  padding: 16px 0 18px 40px;
+}
+
+.tag {
+  padding: 4px 7px;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.2rem;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.tag_selected {
+  border: 1px solid #BBBBBB;
+  color: #DEDEDE;
+}
+.tag_bordered {
+  border: 1px solid #767E9E;
+  color: #767E9E;
+}
+
+.layout-4-column {
+  padding: 0 40px 48px 40px;
+}
+
+.pic {
+  margin-bottom: 20px;
+  width: 220px;
+  height: 187px;
+  cursor: pointer;
+}
+
+.portfolio-1 {
+  background-image: url(../img/portfolio/portfolio-1.svg);
+}
+
+.portfolio-2 {
+  background-image: url(../img/portfolio/portfolio-2.svg);
+}
+
+.portfolio-3 {
+  background-image: url(../img/portfolio/portfolio-3.svg);
+}
+
+.portfolio-4 {
+  background-image: url(../img/portfolio/portfolio-4.svg);
+}
+
+.portfolio-5 {
+  background-image: url(../img/portfolio/portfolio-5.svg);
+}
+
+.portfolio-6 {
+  background-image: url(../img/portfolio/portfolio-6.svg);
+}
+
+.portfolio-7 {
+  background-image: url(../img/portfolio/portfolio-7.svg);
+}
+
+.portfolio-8 {
+  background-image: url(../img/portfolio/portfolio-8.svg);
+}
+
+.portfolio-9 {
+  background-image: url(../img/portfolio/portfolio-9.svg);
+}
+
+.portfolio-10 {
+  background-image: url(../img/portfolio/portfolio-10.svg);
+}
+
+.portfolio-11 {
+  background-image: url(../img/portfolio/portfolio-11.svg);
+}
+
+.portfolio-12 {
+  background-image: url(../img/portfolio/portfolio-12.svg);
 }
 
 .footer {
@@ -232,6 +326,15 @@ h2 {
 }
 .layout-3-column > * {
   flex-basis: 300px;
+}
+
+.layout-4-column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.layout-4-column > * {
+  flex-basis: 23%;
 }
 
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
