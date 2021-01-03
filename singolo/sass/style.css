@@ -269,7 +269,7 @@ h2 {
   border-color: #949ab3;
 }
 
-.layout-4-column {
+/*.layout-4-column {
   padding: 0 40px 48px 40px;
 }
 
@@ -278,64 +278,92 @@ h2 {
   width: 220px;
   height: 187px;
   cursor: pointer;
-}
-.pic:hover::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  opacity: 0.3;
+  &:hover::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    opacity: 0.3;
+
+  }
+
+} */
+.layout-4-column {
+  padding: 0 40px 48px 40px;
 }
 
-.portfolio-1 {
+.pic {
+  width: 23.4%;
+  height: auto;
+  margin: 0 0 20px 0;
+  padding: 0;
+  cursor: pointer;
+}
+.pic:hover {
+  background-color: red;
+  opacity: 0.5;
+}
+
+/*.portfolio-1 {
   background-image: url(../img/portfolio/portfolio-1.svg);
+
 }
 
 .portfolio-2 {
   background-image: url(../img/portfolio/portfolio-2.svg);
+
 }
 
 .portfolio-3 {
   background-image: url(../img/portfolio/portfolio-3.svg);
+
 }
 
 .portfolio-4 {
   background-image: url(../img/portfolio/portfolio-4.svg);
+
 }
 
 .portfolio-5 {
   background-image: url(../img/portfolio/portfolio-5.svg);
+
 }
 
 .portfolio-6 {
   background-image: url(../img/portfolio/portfolio-6.svg);
+
 }
 
 .portfolio-7 {
   background-image: url(../img/portfolio/portfolio-7.svg);
+
 }
 
 .portfolio-8 {
   background-image: url(../img/portfolio/portfolio-8.svg);
+
 }
 
 .portfolio-9 {
   background-image: url(../img/portfolio/portfolio-9.svg);
+
 }
 
 .portfolio-10 {
   background-image: url(../img/portfolio/portfolio-10.svg);
+
 }
 
 .portfolio-11 {
   background-image: url(../img/portfolio/portfolio-11.svg);
+
 }
 
 .portfolio-12 {
   background-image: url(../img/portfolio/portfolio-12.svg);
-}
 
+}*/
 .footer {
   background-color: #2D303A;
   margin: 0;
@@ -401,18 +429,18 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-.layout-3-column > * {
-  flex-basis: 300px;
+  /*>* {
+    flex-basis: $width;
+  }*/
 }
 
 .layout-4-column {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-.layout-4-column > * {
-  flex-basis: 23%;
+  /*>* {
+    flex-basis: $width;
+  }*/
 }
 
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */

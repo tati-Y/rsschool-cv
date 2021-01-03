@@ -45,7 +45,7 @@
 
 //portfolio
 
-.layout-4-column {
+/*.layout-4-column {
   padding: 0 40px 48px 40px;
 }
 
@@ -64,9 +64,27 @@
     
   }
   
+} */
+
+.layout-4-column {
+  padding: 0 40px 48px 40px;
+  
+}  
+
+.pic {
+  width: 23.4%;
+  height: auto;
+  margin: 0 0 20px 0;
+  padding: 0;
+  cursor: pointer;
+  &:hover {    
+    background-color: red;
+    opacity: 0.5;    
+     
+  }
 }
 
-.portfolio-1 {
+/*.portfolio-1 {
   background-image: url(../img/portfolio/portfolio-1.svg);
  
 }
@@ -124,7 +142,7 @@
 .portfolio-12 {
   background-image: url(../img/portfolio/portfolio-12.svg);
   
-}
+}*/
 
 
 
