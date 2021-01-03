@@ -1,4 +1,50 @@
 .footer {
   background-color: $color-bg-dark;
   margin: 0;
+  padding: 22px 42px 20px 40px;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  //padding: 22px 42px 22px 40px;
+}
+
+.footer__text {
+  @include font ($size: 1.3rem, $weight: 900, $height: 1.8rem);
+  color: $color-text-icon-footer;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__social-buttons {
+  margin: 0;
+  padding: 0;
+}
+
+.social-button {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  margin: 0 0 0 7px;
+}
+
+.ico-facebook {
+  background-image: url(../img/footer/ico-facebook.svg);
+}
+
+.ico-google {
+  background-image: url(../img/footer/ico-google-plus.svg);
+}
+
+.ico-twitter {
+  background-image: url(../img/footer/ico-twitter.svg);
+}
+
+.ico-linkedin {
+  background-image: url(../img/footer/ico-linkedin.svg);
 }

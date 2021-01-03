@@ -2,12 +2,14 @@
   background-color: $color-bg-dark;
   border-bottom: 6px solid $color-border-header-portfolio;
   padding: 29px 40px 33px 40px;
+  
 }
 
 .header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .logo {
@@ -19,9 +21,7 @@
   display: inline-block;
   text-transform: uppercase;
   font-family: 'Lato', Verdana, sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 30px;
+  @include font ($size: 2.5rem, $weight: 700, $height: 3.0rem);
   letter-spacing: -3%;
   color: $color-logo-menu;
   padding: 0;
@@ -40,9 +40,7 @@
   display: flex;
   text-transform: uppercase;
   font-family: 'Lato', Verdana, sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 14.4px;
+  @include font ($size: 1.2rem, $weight: 700, $height: 1.44rem);
   letter-spacing: -3.5%;
   padding: 13px 0 0 0;
   margin: 0;
