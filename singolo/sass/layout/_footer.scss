@@ -16,6 +16,9 @@
   color: $color-text-icon-footer;
   margin: 0;
   padding: 0;
+  &:hover {
+    color: lighten($color: $color-text-icon-footer, $amount: 10%);
+  }
 }
 
 .footer__social-buttons {
@@ -31,20 +34,27 @@
   background-position: center;
   padding: 0;
   margin: 0 0 0 7px;
+  border: 1px solid $color-text-icon-footer;
+  border-radius: 50%;
+  &:hover {
+    //border-color: lighten($color: $color-text-icon-footer, $amount: 100%);
+    border-color: $color-bg-dark;
+    box-shadow: 0 0 7px inset rgba($color: lighten($color: $color-text-icon-footer, $amount: 70%), $alpha: 0.7);
+  }
 }
 
 .ico-facebook {
-  background-image: url(../img/footer/ico-facebook.svg);
+  background-image: url(../img/footer/ico-facebook--nocircle.svg);
 }
 
 .ico-google {
-  background-image: url(../img/footer/ico-google-plus.svg);
+  background-image: url(../img/footer/ico-google-plus--nocircle.svg);
 }
 
 .ico-twitter {
-  background-image: url(../img/footer/ico-twitter.svg);
+  background-image: url(../img/footer/ico-twitter--nocircle.svg);
 }
 
 .ico-linkedin {
-  background-image: url(../img/footer/ico-linkedin.svg);
+  background-image: url(../img/footer/ico-linkedin--nocircle.svg);
 }

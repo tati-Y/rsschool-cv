@@ -24,22 +24,32 @@
   background-size: 60px 60px;
   padding: 0;
   position: absolute;
+  &:hover {
+    transform: rotate(360deg);
+    transition: all 1s;
+     };
 }
 
 .item-1 {
   background-image: url(../img/services/services-item-1.svg);
-}
+  
+  }
+
+
 
 .item-2 {
   background-image: url(../img/services/services-item-2.svg);
+  
 }
 
 .item-3 {
   background-image: url(../img/services/services-item-3.svg);
+  
 }
 
 .item-4 {
   background-image: url(../img/services/services-item-4.svg);
+  
 }
 
 .item-5 {
@@ -84,6 +94,9 @@
   color: $color-title-services-portfolio;
   margin: 0;
   padding: 0 0 7px 0;
+  &:hover {
+    color: darken($color:$color-title-services-portfolio, $amount: 15%);
+  }
 }
 
 .services-item__description {

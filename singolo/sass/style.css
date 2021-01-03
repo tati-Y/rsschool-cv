@@ -106,6 +106,9 @@ h2 {
   text-decoration: none;
   color: #ffffff;
 }
+.menu:hover {
+  color: #cccccc;
+}
 
 .active {
   color: #F06C64;
@@ -149,6 +152,10 @@ h2 {
   background-size: 60px 60px;
   padding: 0;
   position: absolute;
+}
+.services-item__icon:hover {
+  transform: rotate(360deg);
+  transition: all 1s;
 }
 
 .item-1 {
@@ -203,6 +210,9 @@ h2 {
   margin: 0;
   padding: 0 0 7px 0;
 }
+.services-item__title:hover {
+  color: #454a5d;
+}
 
 .services-item__description {
   font-size: 1.2rem;
@@ -253,6 +263,10 @@ h2 {
 .tag_bordered {
   border: 1px solid #767E9E;
   color: #767E9E;
+}
+.tag_bordered:hover {
+  color: #a3a8be;
+  border-color: #949ab3;
 }
 
 .layout-4-column {
@@ -342,6 +356,9 @@ h2 {
   margin: 0;
   padding: 0;
 }
+.footer__text:hover {
+  color: #8187a1;
+}
 
 .footer__social-buttons {
   margin: 0;
@@ -356,22 +373,28 @@ h2 {
   background-position: center;
   padding: 0;
   margin: 0 0 0 7px;
+  border: 1px solid #666D89;
+  border-radius: 50%;
+}
+.social-button:hover {
+  border-color: #2D303A;
+  box-shadow: 0 0 7px inset rgba(255, 255, 255, 0.7);
 }
 
 .ico-facebook {
-  background-image: url(../img/footer/ico-facebook.svg);
+  background-image: url(../img/footer/ico-facebook--nocircle.svg);
 }
 
 .ico-google {
-  background-image: url(../img/footer/ico-google-plus.svg);
+  background-image: url(../img/footer/ico-google-plus--nocircle.svg);
 }
 
 .ico-twitter {
-  background-image: url(../img/footer/ico-twitter.svg);
+  background-image: url(../img/footer/ico-twitter--nocircle.svg);
 }
 
 .ico-linkedin {
-  background-image: url(../img/footer/ico-linkedin.svg);
+  background-image: url(../img/footer/ico-linkedin--nocircle.svg);
 }
 
 .layout-3-column {

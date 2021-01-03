@@ -59,16 +59,20 @@
   //  list-style: none;
   //  margin: 0;    
  // }
-  
+ 
 }
 
 .menu {
   text-decoration: none;
   color: $color-logo-menu;
+  &:hover {
+    color: darken($color: $color-logo-menu, $amount: 20%);
+  }
 }
 
 .active {
   color: $color-base-red;
+  
 }
 
 .dot::before {

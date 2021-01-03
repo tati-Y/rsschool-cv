@@ -36,6 +36,10 @@
   &_bordered {
     border: 1px solid $color-text-tag-portfolio;
     color: $color-text-tag-portfolio;
+    &:hover {
+      color: lighten($color: $color-text-tag-portfolio, $amount: 15%);
+      border-color: lighten($color: $color-text-tag-portfolio, $amount: 10%);
+    }
   }
 }
 
