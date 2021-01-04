@@ -8,12 +8,31 @@
 .services__title {
   margin: 0;
   padding: 59px 44px 18px 40px;
+  @include media-tablet {
+    padding: 39px 41px 18px 42px;
+  }
+  @include media-mobile {
+    padding: 25.4px 29px 18px 33px;
+  }
+  @include media-mobilesmall {
+    padding: 25.4px 29px 18px 33px;
+  }
 }
 
 .services__description {
   margin: 0;
   padding: 0 44px 27px 40px;
+  @include media-tablet {
+    padding: 0 41px 28px 42px;
+  }
+  @include media-mobile {
+    padding: 0 29px 25px 33px;
+  }
+  @include media-mobilesmall {
+    padding: 0 29px 25px 33px;
+  }
 }
+
 
 
 .services-item__icon {
@@ -32,29 +51,22 @@
 
 .item-1 {
   background-image: url(../img/services/services-item-1.svg);
-  
-  }
-
-
+}
 
 .item-2 {
   background-image: url(../img/services/services-item-2.svg);
-  
 }
 
 .item-3 {
-  background-image: url(../img/services/services-item-3.svg);
-  
+  background-image: url(../img/services/services-item-3.svg);  
 }
 
 .item-4 {
-  background-image: url(../img/services/services-item-4.svg);
-  
+  background-image: url(../img/services/services-item-4.svg);  
 }
 
 .item-5 {
-  background-image: url(../img/services/services-item-5.svg);
-}
+  background-image: url(../img/services/services-item-5.svg);}
 
 .item-6 {
   background-image: url(../img/services/services-item-6.svg);
@@ -62,6 +74,35 @@
 
 .layout-3-column {
   padding: 0 40px 46px 40px;
+  @include media-tablet {
+    padding: 0 41px 25px 42px;
+  }
+  @include media-mobile {
+    padding: 0 43px 0 33px;
+  }
+  @include media-mobilesmall {
+    padding: 0 43px 0 33px;
+  }
+ }
+
+.services-container {
+  @include media-tablet {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    >.services-item {
+      flex-basis: 48%;
+    }
+  }
+  @include media-mobile {
+    >.services-item {
+      flex-basis: 100%;
+    }
+  }
+  @include media-mobilesmall {
+    >.services-item {
+      flex-basis: 100%;
+    }
+  }
 
 }
 
@@ -69,11 +110,21 @@
   //display: flex;
   //flex-wrap: nowrap;
   //flex-direction: row;
-  width: 300px;
+  //width: 300px;
+  //width: 30%;
   height: 104px;
   padding: 20px 0 0 0;
   position: relative;
   cursor: pointer;
+  @include media-tablet {
+    padding: 0 0 39px 0;
+  }
+  @include media-mobile {
+    padding: 0 0 15px 0;
+  }
+  @include media-mobilesmall {
+    padding: 0 0 15px 0;
+  }
 }
 
 .services-item__content {
@@ -86,6 +137,9 @@
   width: 220px;
   height: 104px;
   overflow: hidden;
+  @include media-mobilesmall {
+    width: 73%;
+  }
 
 }
 

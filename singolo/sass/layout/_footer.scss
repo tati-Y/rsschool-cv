@@ -9,6 +9,12 @@
   align-items: center;
   justify-content: space-between;
   //padding: 22px 42px 22px 40px;
+  @include media-mobile {
+    justify-content: center;
+  }
+  @include media-mobilesmall{
+    justify-content: center;
+  }
 }
 
 .footer__text {
@@ -19,12 +25,21 @@
   &:hover {
     color: lighten($color: $color-text-icon-footer, $amount: 10%);
   }
+  @include media-mobile {
+    display: none;
+  }
+  @include media-mobilesmall{
+    display: none;
+  }
 }
+
 
 .footer__social-buttons {
   margin: 0;
   padding: 0;
+ 
 }
+
 
 .social-button {
   display: inline-block;

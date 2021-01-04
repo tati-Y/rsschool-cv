@@ -3,4 +3,31 @@
   height: 594px;
   border-bottom: 6px solid $color-border-red;
   margin: 0;
+  @include media-tablet {
+    height: 452px;
+  }
+  @include media-mobile {
+    height: 220px;
+  }
+  @include media-mobilesmall {
+    height: 220px;
+  }
+}
+
+//slide red
+
+.slide1 {
+  width: $content-width;
+  height: 600px;
+  @include media-tablet {
+    height: 452px;
+  }
+  @include media-mobile {
+    height: 220px;
+  }
+  @include media-mobilesmall {
+    height: 220px;
+  }
+
+  
 }

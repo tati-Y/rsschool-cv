@@ -2,16 +2,35 @@
   background-color: $color-bg-dark;
   border-bottom: 6px solid $color-border-header-portfolio;
   margin: 0;
+  @include media-mobile {
+    border-bottom: none;
+  }
+  @include media-mobilesmall{
+    border-bottom: none;
+  }
+  
 }
 
 .portfolio__title {
   margin: 0;
   padding: 59px 44px 14px 40px;
+  @include media-mobile {
+    padding: 42px 30px 14px 30px;
+  }
+  @include media-mobilesmall{
+    padding: 42px 30px 14px 30px;
+  }
 }
 
 .portfolio__description {
   margin: 0;
   padding: 0 44px 0 40px;
+  @include media-mobile {
+    padding: 0 30px 0 30px;
+  }
+  @include media-mobilesmall{
+    padding: 0 30px 0 30px;
+  }
 }
 
 //tags
@@ -19,6 +38,15 @@
 .portfolio__tags {
   display: flex;
   padding: 16px 0 18px 40px;
+  @include media-tablet {
+    padding: 12px 0 28px 40px;
+  }
+  @include media-mobile {
+    padding: 10px 0 25px 30px;
+  }
+  @include media-mobilesmall{
+    padding: 10px 0 25px 30px;
+  }
 }
 
 .tag {
@@ -41,35 +69,42 @@
       border-color: lighten($color: $color-text-tag-portfolio, $amount: 10%);
     }
   }
+  @include media-mobilesmall {
+    font-size: 1.0rem;
+  }
 }
 
 //portfolio
 
-/*.layout-4-column {
-  padding: 0 40px 48px 40px;
-}
-
-.pic {
-  margin-bottom: 20px;
-  width: 220px;
-  height: 187px;
-  cursor: pointer;
-  &:hover::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    opacity: 0.3;
-    
-  }
-  
-} */
-
 .layout-4-column {
   padding: 0 40px 48px 40px;
-  
+  @include media-mobile {
+    padding: 0 30px 28px 30px;
+  }
+  @include media-mobilesmall{
+    padding: 0 30px 28px 30px;
+  }
 }  
+
+.portfolio-container {
+  @include media-tablet {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    >.pic {
+      flex-basis: 31.5%;
+    }
+  }
+  @include media-mobile {
+    >.pic {
+      flex-basis: 48%;
+    }
+  }
+  @include media-mobilesmall{
+    >.pic {
+      flex-basis: 48%;
+    }
+  }
+}
 
 .pic {
   width: 23.4%;
@@ -79,8 +114,13 @@
   cursor: pointer;
   &:hover {    
     background-color: red;
-    opacity: 0.5;    
-     
+    opacity: 0.5;         
+  }
+  @include media-mobile {
+    margin: 0 0 14px 0;
+  }
+  @include media-mobilesmall{
+    margin: 0 0 14px 0;
   }
 }
 
