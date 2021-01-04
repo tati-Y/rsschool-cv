@@ -84,6 +84,10 @@
   @include media-mobilesmall{
     padding: 0 30px 28px 30px;
   }
+  .portfolio-12 ~ .pic {
+    display: none;
+  }
+ 
 }  
 
 .portfolio-container {

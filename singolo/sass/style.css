@@ -497,6 +497,9 @@ h2 {
     padding: 0 30px 28px 30px;
   }
 }
+.layout-4-column .portfolio-12 ~ .pic {
+  display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1019px) {
   .portfolio-container {
