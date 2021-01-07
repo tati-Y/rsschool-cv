@@ -1,27 +1,50 @@
 console.log('hello');
 
+window.onload = function() {
+  console.log('hello u');
+  addTagsClickHandler();
+  //replacePortfolio();
+  removePortfolioWhenClickTag();
+}
+
+//click tags
+
 const addTagsClickHandler = () => {
   document.querySelector('.portfolio__tags').addEventListener('click', (e) => {
     if (e.target.classList.contains('tag')) {
       let clickedTag = e.target;
       removeSelectedTag();
       selectClickedTag(clickedTag);
-    }
-    
+      //replacePortfolio();
+    }    
   })
 }
 
 const removeSelectedTag = () => {
   let tags = document.querySelectorAll('.portfolio__tags .tag');
-
-  tags.forEach((tags) => {
-    tags.classList.remove('tag_selected');
-    tags.classList.add('tag_bordered');
+  tags.forEach(tag => {
+    tag.classList.remove('tag_selected');
+    tag.classList.add('tag_bordered');    
   })
-   }
-
+}
 
 const selectClickedTag = (clickedTag) => {
   clickedTag.classList.remove('tag_bordered');
   clickedTag.classList.add('tag_selected');
 }
+
+const removePortfolioWhenClickTag = () => {
+  document.querySelector('.portfolio__tags').addEventListener('click', () => {
+          replacePortfolio();
+    })      
+}
+
+const replacePortfolio = () => {
+  let pics = document.querySelectorAll('.portfolio-container .pic');
+  //shuffle(pics);
+  //let lastElement = pics.shift();
+ // pics.push(pics.shift());
+  pics.sort((a,b) => 0.5 - Math.random());
+  console.log('ku');
+}
+

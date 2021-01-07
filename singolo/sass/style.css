@@ -45,36 +45,134 @@ h2 {
 @media (min-width: 768px) and (max-width: 1019px) {
   .slider {
     height: 452px;
+    border-bottom: hidden;
   }
 }
 @media (min-width: 375px) and (max-width: 767px) {
   .slider {
     height: 220px;
+    border-bottom: hidden;
   }
 }
 @media (min-width: 320px) and (max-width: 374px) {
   .slider {
     height: 220px;
+    border-bottom: hidden;
   }
 }
 
-.slide1 {
+.slider__wrapper {
+  position: relative;
+  margin: auto;
   width: 1020px;
   height: 600px;
 }
 @media (min-width: 768px) and (max-width: 1019px) {
-  .slide1 {
+  .slider__wrapper {
+    width: 768px;
     height: 452px;
   }
 }
 @media (min-width: 375px) and (max-width: 767px) {
-  .slide1 {
+  .slider__wrapper {
+    width: 375px;
     height: 220px;
   }
 }
 @media (min-width: 320px) and (max-width: 374px) {
-  .slide1 {
+  .slider__wrapper {
+    width: 320px;
+    height: auto;
+  }
+}
+
+.slider_image {
+  position: relative;
+  width: 1020px;
+  height: 600px;
+  overflow: hidden;
+}
+@media (min-width: 768px) and (max-width: 1019px) {
+  .slider_image {
+    width: 768px;
+    height: 452px;
+  }
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .slider_image {
+    width: 375px;
     height: 220px;
+  }
+}
+@media (min-width: 320px) and (max-width: 374px) {
+  .slider_image {
+    width: 320px;
+    height: 220px;
+  }
+}
+.slider_image > img {
+  position: absolute;
+  width: 1020pxpx;
+  height: 600px;
+}
+@media (min-width: 768px) and (max-width: 1019px) {
+  .slider_image > img {
+    width: 768px;
+    height: 452px;
+  }
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .slider_image > img {
+    width: 375px;
+    height: 220px;
+  }
+}
+@media (min-width: 320px) and (max-width: 374px) {
+  .slider_image > img {
+    width: 320px;
+    height: auto;
+  }
+}
+
+.container__arrow_left {
+  position: absolute;
+  left: 3.92%;
+  top: 283px;
+}
+@media (min-width: 768px) and (max-width: 1019px) {
+  .container__arrow_left {
+    top: 211px;
+  }
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .container__arrow_left {
+    top: 98px;
+  }
+}
+@media (min-width: 320px) and (max-width: 374px) {
+  .container__arrow_left {
+    top: 98px;
+  }
+}
+
+.container__arrow_right {
+  position: absolute;
+  top: 283px;
+  right: 3.92%;
+}
+@media (min-width: 768px) and (max-width: 1019px) {
+  .container__arrow_right {
+    top: 211px;
+  }
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .container__arrow_right {
+    top: 98px;
+  }
+}
+@media (min-width: 320px) and (max-width: 374px) {
+  .container__arrow_right {
+    top: 98px;
   }
 }
 
