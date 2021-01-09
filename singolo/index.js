@@ -1,11 +1,11 @@
 console.log('hello');
 
-window.onload = function() {
+/*window.onload = function() {
   console.log('hello u');
   addTagsClickHandler();
   //replacePortfolio();
   removePortfolioWhenClickTag();
-}
+}*/
 
 //click tags
 
@@ -14,8 +14,7 @@ const addTagsClickHandler = () => {
     if (e.target.classList.contains('tag')) {
       let clickedTag = e.target;
       removeSelectedTag();
-      selectClickedTag(clickedTag);
-      //replacePortfolio();
+      selectClickedTag(clickedTag);      
     }    
   })
 }
@@ -33,20 +32,29 @@ const selectClickedTag = (clickedTag) => {
   clickedTag.classList.add('tag_selected');
 }
 
-const removePortfolioWhenClickTag = () => {
-  document.querySelector('.portfolio__tags').addEventListener('click', () => {
-          replacePortfolio();
-    })      
-}
+addTagsClickHandler();
+
+//remove portfolio
 
 const replacePortfolio = () => {
-  let pics = document.querySelectorAll('.portfolio-container .pic');
-  //shuffle(pics);
-  //let lastElement = pics.shift();
- // pics.push(pics.shift());
-  pics.sort((a,b) => 0.5 - Math.random());
-  console.log('ku');
+  let pics = document.querySelectorAll('.portfolio-container img');
+  let picsArray = [];
+  for (let i = 0; i <pics.length; i++) {
+    picsArray[i] = pics[i].src;
+    pics[i].remove();
+  }
+
+  let shuffledArray = picsArray.sort((a,b) => 0.5 - Math.random());
+
+  for (let i = 0; i <shuffledArray.length; i++) {
+    let img = document.createElement('img');
+    img.src = shuffledArray[i];
+    img.classList.add('pic');
+    document.querySelector('.portfolio-container').appendChild(img);
+  }    
 }
+
+document.querySelector('.portfolio__tags').onclick = replacePortfolio;
 
 //simple slider
 
@@ -81,11 +89,6 @@ document.querySelector('.burger-menu__nav').onclick = openBurgerMenu;
 document.querySelector('.burger-menu__overlay').onclick = openBurgerMenu;
 
 //menu - change color of active item
-
-/*window.onload = function() {
-  console.log('hello menu');
-  addMenuClickHandler();
-}*/
 
 const addMenuClickHandler = () => {
   document.querySelector('.navigation').addEventListener('click', (e) => {
