@@ -68,3 +68,29 @@ function slider() {
 
 document.querySelector('.container__arrow_left').onclick = slider;
 document.querySelector('.container__arrow_right').onclick = slider;
+
+//burger-menu
+
+function openBurgerMenu() {
+  let burger = document.querySelector('.burger-menu');
+  burger.classList.toggle('burger-menu_active');
+  
+}
+
+function closeBurgerMenu() {
+  let burgerActive = document.querySelector('.burger-menu');
+  burgerActive.classList.remove('burger-menu_active');
+  
+}
+
+document.querySelector('.burger-menu__button').onclick = openBurgerMenu;
+document.querySelector('.burger-menu__nav').onclick = openBurgerMenu;
+document.querySelector('.burger-menu__overlay').onclick = openBurgerMenu;
+
+
+
+
+
+
+
+
