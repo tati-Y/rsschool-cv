@@ -73,21 +73,43 @@ document.querySelector('.container__arrow_right').onclick = slider;
 
 function openBurgerMenu() {
   let burger = document.querySelector('.burger-menu');
-  burger.classList.toggle('burger-menu_active');
-  
-}
-
-function closeBurgerMenu() {
-  let burgerActive = document.querySelector('.burger-menu');
-  burgerActive.classList.remove('burger-menu_active');
-  
+  burger.classList.toggle('burger-menu_active');  
 }
 
 document.querySelector('.burger-menu__button').onclick = openBurgerMenu;
 document.querySelector('.burger-menu__nav').onclick = openBurgerMenu;
 document.querySelector('.burger-menu__overlay').onclick = openBurgerMenu;
 
+//menu - change color of active item
 
+/*window.onload = function() {
+  console.log('hello menu');
+  addMenuClickHandler();
+}*/
+
+const addMenuClickHandler = () => {
+  document.querySelector('.navigation').addEventListener('click', (e) => {
+    if (e.target.classList.contains('menu')) {
+      let clickedMenu = e.target;
+      removeSelectedMenu();
+      selectClickedMenu(clickedMenu);     
+    }    
+  })
+}
+
+const removeSelectedMenu = () => {
+  let tags = document.querySelectorAll('.navigation .menu');
+  tags.forEach(menu => {
+    menu.classList.remove('active');
+  })
+}
+
+const selectClickedMenu = (clickedMenu) => {
+  //clickedTag.classList.remove('tag_bordered');
+  clickedMenu.classList.add('active');
+}
+
+addMenuClickHandler();
 
 
 
