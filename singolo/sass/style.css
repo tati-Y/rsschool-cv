@@ -59,7 +59,7 @@ h2 {
 }
 @media (min-width: 320px) and (max-width: 374px) {
   .slider {
-    height: 220px;
+    height: 180px;
     border-bottom: hidden;
   }
 }
@@ -111,7 +111,7 @@ h2 {
 @media (min-width: 320px) and (max-width: 374px) {
   .slider_image {
     width: 320px;
-    height: 220px;
+    height: 180px;
   }
 }
 .slider_image > img {
@@ -161,7 +161,7 @@ h2 {
 }
 @media (min-width: 320px) and (max-width: 374px) {
   .container__arrow_left {
-    top: 98px;
+    top: 78px;
   }
 }
 
@@ -186,7 +186,7 @@ h2 {
 }
 @media (min-width: 320px) and (max-width: 374px) {
   .container__arrow_right {
-    top: 98px;
+    top: 78px;
   }
 }
 

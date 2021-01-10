@@ -12,7 +12,7 @@
     border-bottom: hidden;
   }
   @include media-mobilesmall {
-    height: 220px;
+    height: 180px;
     border-bottom: hidden;
   }
 }
@@ -53,7 +53,7 @@
   }
   @include media-mobilesmall {
     width: $mobile-small-width;
-    height: 220px;
+    height: 180px;
   }
   > img {
   position: absolute;
@@ -101,7 +101,7 @@
     top: 98px;
   }
   @include media-mobilesmall {
-    top: 98px;
+    top: 78px;
   }  
 }
 
@@ -120,7 +120,7 @@
     top: 98px;
   }
   @include media-mobilesmall {
-    top: 98px;
+    top: 78px;
   }  
 }
 

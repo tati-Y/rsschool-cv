@@ -89,9 +89,8 @@ let slides = document.querySelectorAll('.slide');
 
   let step = 0;
   let offset = 0; 
-
   
-   function drawVisibleSlideToLeft() {
+  function drawVisibleSlideToLeft() {
         let slide = document.createElement('img');
         slide.src = slider[step];
         slide.classList.add('slide');
@@ -103,8 +102,8 @@ let slides = document.querySelectorAll('.slide');
           step++;}
         //step++;
         offset = 1;               
-    }
-    drawVisibleSlideToLeft(); 
+  }
+  drawVisibleSlideToLeft(); 
 
   function left() {
     drawVisibleSlideToLeft();
