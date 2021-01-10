@@ -36,6 +36,9 @@ h2 {
   color: #767E9E;
 }
 
+/*body, html {
+  scroll-behavior: smooth;
+}*/
 .slider {
   background-color: #F06C64;
   height: 594px;
@@ -115,6 +118,8 @@ h2 {
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   transition: all ease 1s;
   /*@include media-tablet {
     width: 768px;
@@ -193,6 +198,7 @@ h2 {
   width: 25px;
   height: 20px;
   z-index: 50;
+  transition: 0.4s;
 }
 @media (min-width: 768px) and (max-width: 1019px) {
   .burger-menu__button {
@@ -234,7 +240,7 @@ h2 {
 }
 
 .burger-menu_active .burger-menu__button {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   position: fixed;
 }
 

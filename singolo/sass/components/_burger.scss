@@ -8,6 +8,7 @@
   width: 25px;
   height: 20px;
   z-index: 50;
+  transition: 0.4s;
   //background-color: $color-bg-dark;
   @include media-tablet {
     display: none;
@@ -46,8 +47,8 @@
 }
 
 .burger-menu_active .burger-menu__button {
-  transform: rotate(90deg);
-  position: fixed;
+  transform: rotate(-90deg);
+  position: fixed;  
 }
 
 /*.burger-menu_active .burger-menu__lines {
