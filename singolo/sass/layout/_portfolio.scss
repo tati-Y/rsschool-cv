@@ -1,0 +1,194 @@
+.portfolio {
+  background-color: $color-bg-dark;
+  border-bottom: 6px solid $color-border-header-portfolio;
+  margin: 0;
+  @include media-mobile {
+    border-bottom: none;
+  }
+  @include media-mobilesmall{
+    border-bottom: none;
+  }
+  
+}
+
+.portfolio__title {
+  margin: 0;
+  padding: 59px 44px 14px 40px;
+  @include media-mobile {
+    padding: 42px 30px 14px 30px;
+  }
+  @include media-mobilesmall{
+    padding: 42px 30px 14px 30px;
+  }
+}
+
+.portfolio__description {
+  margin: 0;
+  padding: 0 44px 0 40px;
+  @include media-mobile {
+    padding: 0 30px 0 30px;
+  }
+  @include media-mobilesmall{
+    padding: 0 30px 0 30px;
+  }
+}
+
+//tags
+
+.portfolio__tags {
+  display: flex;
+  padding: 16px 0 18px 40px;
+  @include media-tablet {
+    padding: 12px 0 28px 40px;
+  }
+  @include media-mobile {
+    padding: 10px 0 25px 30px;
+  }
+  @include media-mobilesmall{
+    padding: 10px 0 25px 30px;
+  }
+}
+
+.tag {
+  padding: 4px 7px;
+  margin-right: 10px;
+  @include font ($size: 1.2rem, $height: 1.2rem);
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  &_selected {
+    border: 1px solid #BBBBBB;
+    color: #DEDEDE;
+  }
+  &_bordered {
+    border: 1px solid $color-text-tag-portfolio;
+    color: $color-text-tag-portfolio;
+    &:hover {
+      color: lighten($color: $color-text-tag-portfolio, $amount: 15%);
+      border-color: lighten($color: $color-text-tag-portfolio, $amount: 10%);
+    }
+  }
+  @include media-mobilesmall {
+    font-size: 1.0rem;
+  }
+}
+
+//portfolio
+
+.layout-4-column {
+  padding: 0 40px 48px 40px;
+  @include media-mobile {
+    padding: 0 30px 28px 30px;
+  }
+  @include media-mobilesmall{
+    padding: 0 30px 28px 30px;
+  }
+  .portfolio-12 ~ .pic {
+    display: none;
+  }
+ 
+}  
+
+.portfolio-container {
+  @include media-tablet {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    >.pic {
+      flex-basis: 31.5%;
+    }
+  }
+  @include media-mobile {
+    >.pic {
+      flex-basis: 48%;
+    }
+  }
+  @include media-mobilesmall{
+    >.pic {
+      flex-basis: 48%;
+    }
+  }
+}
+
+.pic {
+  width: 23.4%;
+  height: auto;
+  margin: 0 0 20px 0;
+  padding: 0;
+  cursor: pointer;
+  &:hover {    
+    background-color: red;
+    opacity: 0.5;         
+  }
+  @include media-mobile {
+    margin: 0 0 14px 0;
+  }
+  @include media-mobilesmall{
+    margin: 0 0 14px 0;
+  }
+}
+
+/*.portfolio-1 {
+  background-image: url(../img/portfolio/portfolio-1.svg);
+ 
+}
+
+.portfolio-2 {
+  background-image: url(../img/portfolio/portfolio-2.svg);
+  
+}
+
+.portfolio-3 {
+  background-image: url(../img/portfolio/portfolio-3.svg);
+ 
+}
+
+.portfolio-4 {
+  background-image: url(../img/portfolio/portfolio-4.svg);
+  
+}
+
+.portfolio-5 {
+  background-image: url(../img/portfolio/portfolio-5.svg);
+  
+}
+
+.portfolio-6 {
+  background-image: url(../img/portfolio/portfolio-6.svg);
+  
+}
+
+.portfolio-7 {
+  background-image: url(../img/portfolio/portfolio-7.svg);
+  
+}
+
+.portfolio-8 {
+  background-image: url(../img/portfolio/portfolio-8.svg);
+  
+}
+
+.portfolio-9 {
+  background-image: url(../img/portfolio/portfolio-9.svg);
+  
+}
+
+.portfolio-10 {
+  background-image: url(../img/portfolio/portfolio-10.svg);
+  
+}
+
+.portfolio-11 {
+  background-image: url(../img/portfolio/portfolio-11.svg);
+  
+}
+
+.portfolio-12 {
+  background-image: url(../img/portfolio/portfolio-12.svg);
+  
+}*/
+
+
+
+
+
