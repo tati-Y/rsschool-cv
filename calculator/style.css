@@ -1,23 +1,26 @@
-.body {
+/*.body {
   width: 100%;
   height: 100%;
-  background-color:#594aca;   
-}
+  background-color:#ada7b9;   
+}*/
 
 .container {
-  width: 514px;
-  margin: auto;
-  padding: 50px 50px;  
+  width: /*514px;*/ 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 30px 0; 
+  background-color:#ada7b9;  
 }
 
 .calc {
   background-color:#29293A;
   width: 414px;
   height: 700px;
-  margin: 20px auto;
+  margin: auto;
   padding: 100px 0 10px 0;
   border-radius: 45px;  
   position: relative;
+  
 }
 
 @keyframes heart-bit {
@@ -86,14 +89,13 @@
   border-style: none;
   box-shadow: -7px -7px 10px #37373d,
    7px 7px 10px #1d1d20;
-   color: #DBDBE2;
-   font-size: 30px;
+  color: #DBDBE2;
+  font-size: 30px;
 }
 
 .btn:hover {
   box-shadow: inset -3px -3px 5px #37373d,
    inset 3px 3px 5px #1d1d20;
-
 }
 
 .arrow {
