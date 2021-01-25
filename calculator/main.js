@@ -1,18 +1,13 @@
 let btnNumber = document.querySelectorAll('.btn_number'),
     btnOperation = document.querySelectorAll('.btn_operation'),
+    btnBrackets = document.querySelectorAll('.btn_bracket'),
     btnClear = document.getElementById('clear'),
     btnDot = document.getElementById('dot'),
     btnResult = document.getElementById('result'),
     btnDelete = document.getElementById('delete'),
     displayNum = document.querySelector('.display__numbers'),
-    displayFormula = document.querySelector('.display__formula'),
-    memoryCurrentNumber = 0,
-    memoryNewNumber = false,
-    MemoryPendingOperation = '';
-
-
-
-    
+    displayFormula = document.querySelector('.display__formula');
+      
 
 
 for (i=0; i < btnNumber.length; i++) {
@@ -29,8 +24,15 @@ for (i=0; i < btnOperation.length; i++) {
   });  
 };
 
+for (i=0; i < btnBrackets.length; i++) {
+  let bracket = btnBrackets[i];
+  bracket.addEventListener("click", function(e){
+    pressBracket(e.target.innerText);
+  }); 
+};
 
-btnResult.addEventListener("click", pressResult);
+
+btnResult.addEventListener("click", pressResult);  
     
 btnClear.addEventListener("click", pressClear);
 
@@ -39,65 +41,67 @@ btnDelete.addEventListener("click", pressDelete);
 btnDot.addEventListener("click", pressDot);
 
 
-  
-
-
-
+let isOperatorPressed = false,
+    isResultPressed = false;
+    
 
 function pressNumber(num) {
-  if (memoryNewNumber === true) {
-      displayNum.value = num;
-      memoryNewNumber = false;
-  } else {
-    if(displayNum.value === "0") {
-      displayNum.value = num;
-    } else {
-      displayNum.value += num;
-    };
-  };
-
+  displayFormula.value = displayFormula.value + num;
+  displayNum.value = '=';
+  isOperatorPressed = false;
+  isResultPressed = false;
+}
+  
+function pressOperation(symbol) {
+  let symbOper = symbol;
+  if (isOperatorPressed === false && !!displayFormula.value === true){
+    displayFormula.value = displayFormula.value + symbol;
+    isOperatorPressed = true;
+  }  
+  if (symbOper === '-' && !!displayFormula.value === false){
+    displayFormula.value = displayFormula.value + symbOper;
+    isOperatorPressed = true;
+  }
 }
 
-function pressOperation(symbol) {
-  let localOperationMemory = displayNum.value;
-        
-        if(memoryNewNumber && MemoryPendingOperation !== "=") {
-          displayNum.value = memoryCurrentNumber;
-        } else {
-            memoryNewNumber = true;
-            if (MemoryPendingOperation === "+") {
-                memoryCurrentNumber += +localOperationMemory;  
-            } else if (MemoryPendingOperation === "-") {
-                memoryCurrentNumber -= +localOperationMemory;  
-            } else if (MemoryPendingOperation === "*") {
-                memoryCurrentNumber *= +localOperationMemory;  
-            } else if (MemoryPendingOperation === "/") {
-                memoryCurrentNumber /= +localOperationMemory;  
-            } else {
-                memoryCurrentNumber = +localOperationMemory;  
-            }
-            displayNum = memoryCurrentNumber;
-            MemoryPendingOperation = symbol;
-        };
-  
+function pressBracket(bracket) {
+  let symbBr = bracket;
+  if (symbBr === '(' && isOperatorPressed === true || !!displayFormula.value === false){
+    displayFormula.value = displayFormula.value + bracket;
+    isOperatorPressed = true;
+  }  
+  if (symbBr === ')' && isOperatorPressed === false){
+    displayFormula.value = displayFormula.value + bracket;
+    isOperatorPressed = false;
+  }
 }
 
 function pressResult() {
-  console.log('click result');
-  
+  if (isResultPressed === false){
+  displayNum.value = displayNum.value + eval(displayFormula.value);
+  displayFormula.value = eval(displayFormula.value);
+  isResultPressed = true;
+  }
 }
 
 function pressDot() {
-  console.log("Клик по dot");
-  
+  let isDot = /\./g;
+  if (isOperatorPressed === false && isDot.test(displayFormula.value) === false){
+  displayFormula.value = displayFormula.value + '.';  
+  isOperatorPressed = true;
+  }
 }
 
 function pressClear() {
-  console.log("Клик по clear");
-  
+  displayFormula.value = '';
+  displayNum.value = '0';  
 }
 
 function pressDelete() {
-  console.log("Клик по delete");
-  
+  displayFormula.value = displayFormula.value.substring(0, displayFormula.value.length - 1);  
 }
+
+
+
+
+
