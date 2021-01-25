@@ -78,7 +78,7 @@ function pressBracket(bracket) {
 
 function pressResult() {
   if (isResultPressed === false){
-  displayNum.value = displayNum.value + eval(displayFormula.value);
+  displayNum.value = /*displayNum.value + */ eval(displayFormula.value);
   displayFormula.value = eval(displayFormula.value);
   isResultPressed = true;
   }

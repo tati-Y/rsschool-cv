@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
   <main>
@@ -12,8 +14,8 @@
       <div class="calc">
         <div class="heart"></div>
         <div class="display">
-          <input disabled type="text" value='0' name='' class="input display__numbers">
-          <textarea type="text" rows='2' value='' class="input display__formula"></textarea>
+          <input disabled type="text" value='0' maxlength="7" name='' class="input display__numbers">
+          <textarea type="text" rows='2' value='' maxlength="68" placeholder='=' class="input display__formula"></textarea>
         </div>
         <div class="buttons">
           <table>
