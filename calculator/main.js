@@ -78,8 +78,13 @@ function pressBracket(bracket) {
 
 function pressResult() {
   if (isResultPressed === false){
-  displayNum.value = /*displayNum.value + */ eval(displayFormula.value);
-  displayFormula.value = eval(displayFormula.value);
+  let result = eval(displayFormula.value);
+  if (result > 99999999){
+    displayNum.value = result.toExponential(3);
+  } else {
+    displayNum.value = result;
+  }
+  displayFormula.value = result;
   isResultPressed = true;
   }
 }
