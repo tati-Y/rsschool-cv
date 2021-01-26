@@ -98,6 +98,7 @@
   border-radius: 22px;
   background-color: #29293A;
   border-style: none;
+  outline: none;
   box-shadow: -7px -7px 10px #37373d,
    7px 7px 10px #1d1d20;
   color: #DBDBE2;
@@ -107,8 +108,9 @@
 
 .btn:hover {
   box-shadow: inset -3px -3px 5px #37373d,
-   inset 3px 3px 5px #1d1d20;
+   inset 3px 3px 5px #1d1d20;   
 }
+
 
 .arrow {
   background-image: url(img/delete.png);
