@@ -82,7 +82,7 @@ function pressResult() {
   if (result > 99999999){
     displayNum.value = result.toExponential(3);
   } else {
-    displayNum.value = result;
+    displayNum.value = result.toFixed(7);
   }
   displayFormula.value = result;
   isResultPressed = true;
