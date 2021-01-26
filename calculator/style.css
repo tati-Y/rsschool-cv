@@ -1,8 +1,13 @@
-.body {
-  height: 100%;
-  /*background-color:#ada7b9; */
-  font-family: 'Saira', sans-serif;  
+@font-face {
+  src: url(fonts/Khula-Regular.ttf);
+  font-family: 'Khula';
 }
+
+
+/*.body {
+  height: 100%;
+  background-color:#ada7b9;
+ }*/
 
 .container {
   width: /*514px;*/ 100%;
@@ -19,8 +24,7 @@
   margin: auto;
   padding: 100px 0 10px 0;
   border-radius: 45px;  
-  position: relative;
-  font-family: 'Oxanium', cursive;  
+  position: relative;  
 }
 
 @keyframes heart-bit {
