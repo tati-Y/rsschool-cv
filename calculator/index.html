@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Khula:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="calc">
+        <div class="heart"></div>
+        <div class="display">
+          <input disabled type="text" value='0'  name='' class="input display__numbers">
+          <textarea type="text" rows='2' value='' maxlength="68" placeholder='=' class="input display__formula"></textarea>
+        </div>
+        <div class="buttons">
+          <table>
+            <tr class="btn__row">
+              <td><button type="button" class="btn btn_clear" id='clear'>C</button></td>
+              <td><button type="button" class="btn btn_bracket">(</button></td>
+              <td><button type="button" class="btn btn_bracket">)</button></td>
+              <td><button type="button" class="btn btn_operation">/</button></td>              
+            </tr>
+            <tr class="btn__row">
+              <td><button type="button" class="btn btn_number">7</button></td>
+              <td><button type="button" class="btn btn_number">8</button></td>
+              <td><button type="button" class="btn btn_number">9</button></td>
+              <td><button type="button" class="btn btn_operation">*</button></td>              
+            </tr>
+            <tr class="btn__row">
+              <td><button type="button" class="btn btn_number">4</button></td>
+              <td><button type="button" class="btn btn_number">5</button></td>
+              <td><button type="button" class="btn btn_number">6</button></td>
+              <td><button type="button" class="btn btn_operation">-</button></td>              
+            </tr>
+            <tr class="btn__row">
+              <td><button type="button" class="btn btn_number">1</button></td>
+              <td><button type="button" class="btn btn_number">2</button></td>
+              <td><button type="button" class="btn btn_number">3</button></td>
+              <td><button type="button" class="btn btn_operation">+</button></td>              
+            </tr>
+            <tr class="btn__row">
+              <td><button type="button" class="btn btn_number">0</button></td>
+              <td><button type="button" class="btn btn_dot" id='dot'>.</button></td>
+              <td><button type="button" class="btn arrow btn_delete" id='delete'></button></td>
+              <td><button type="button" class="btn btn_result" id='result'>=</button></td>              
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>  
+</body>
+</html>
