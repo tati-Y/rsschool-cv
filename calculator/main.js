@@ -81,12 +81,16 @@ function pressResult() {
   let result = eval(displayFormula.value);
   if (result > 99999999){
     displayNum.value = result.toExponential(3);
+  } else
+  if (Number.isInteger(result)) {
+    displayNum.value = result;
   } else {
-    displayNum.value = result.toFixed(7);
+    displayNum.value = result.toFixed(4);
   }
   displayFormula.value = result;
   isResultPressed = true;
-  }
+  
+}
 }
 
 function pressDot() {
