@@ -7,24 +7,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="block clock">
-    <time class="time">16:35:25</time>
-  </div>
 
-  <div class="block plan">
-    <h1 class="greeting">Good morning, Tanya!</h1>
-    <hr>
-    <h2 class="plan_question">What are your plans for today?</h2>
-    <input type="text" autofocus>
+  <div class="container">
+    <div class="clock">
+      <time class="time">16:35:25</time>
+    </div>  
+    <div class="plan">
+      <h1 class="greeting">Good morning, Tanya!</h1>
+      <hr>
+      <h2 class="plan_question">What are your plans for today?</h2>
+      <form action="">
+        <input class="input" type="text" value=" " autofocus>
+        <br>
+        <button class="input_button">Yeah!</button>
+      </form>      
+    </div>
   </div>
-
-  <div class="block plan-list">
-    <p class="plans_name">Tanya's plans:</p>
-    <ul class="plans_text">
-      <li>i wish i could fly</li>
-    </ul>
-    <button class="clear_plans">Clear plans</button>
-    <button class="clear_all">Clear all</button>
+  
+  <div class="plan-list">
+    <div class="block_plans">
+      <p class="plans_name">Tanya's plans:</p>
+      <ul class="plans_text">
+        <li>i wish i could fly</li>
+      </ul>
+    </div>
+    <div class="block_buttons">
+      <button class="clear clear_plans">Clear plans</button>
+      <button class="clear clear_all">Clear all</button>
+    </div>   
   </div>
   
   <script src="main.js"></script>

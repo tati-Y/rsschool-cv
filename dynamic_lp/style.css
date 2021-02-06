@@ -1,0 +1,123 @@
+body {
+  font-size: 10 px;
+  background: fixed blue url(img/night.jpg) center no-repeat;
+  background-size: cover;
+  /*width: 100 wv;*/
+  height: 100vh;
+  margin: 0;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  height: 600px;
+  background-color: rgba(66, 72, 90, 0.5);
+  border-radius: 50px;
+  box-shadow: 5px 5px 7px rgba(41, 41, 41, 0.8);
+
+}
+
+
+.clock, .plan {   
+  width: 80%;  
+  text-align: center;
+}
+
+.time {
+  font-size: 7rem; 
+  color: white;
+  
+}
+
+.greeting {
+  font-size: 2.2rem;
+  color: white;
+}
+
+.plan_question {
+  font-size: 1.8rem;
+  color: white;  
+}
+
+.input {
+  border: none;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(220, 219, 223, 0.6);
+  margin: 20px 0 0 0;
+  font-size: 1.2rem;
+}
+
+.input:focus {
+  border: 2px solid rgb(199, 140, 32);
+  outline: none;
+}
+
+.input_button {
+  margin: 30px 0 0 0;
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  font-size: 1.1rem;
+  background-color: rgb(199, 140, 32);
+  border: none;
+  border-radius: 10px;
+}
+
+.input_button:hover {
+  font-size: 1.3rem;
+  background-color: rgb(230, 167, 51);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+
+
+.plan-list {
+  box-sizing: border-box;
+  width: 300px;
+  height: 600px;
+  background-color: rgba(66, 72, 90, 0.5);
+  border-radius: 50px;
+  box-shadow: 5px 5px 7px rgba(41, 41, 41, 0.8) ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.block_plans {
+  width: 80%;
+  height: 400px;
+  color: #fff;
+  font-size: 1.1rem;
+  overflow: hidden;
+}
+
+.clear {
+  margin: 10px 0 0 0;
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  font-size: 1.0rem;
+  background-color: rgb(199, 140, 32);
+  border: none;
+  border-radius: 10px;
+}
+
+.clear:hover {
+  background-color: rgb(230, 167, 51);
+  cursor: pointer;
+  transition: all 0.5s;
+}
