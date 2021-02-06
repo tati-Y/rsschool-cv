@@ -1,3 +1,18 @@
+@font-face {
+  src: url(fonts/Roboto-Regular.ttf);
+  font-family: 'Roboto';
+}
+
+@font-face {
+  src: url(fonts/IndieFlower-Regular.ttf);
+  font-family: 'Indie Flower';
+}
+@font-face {
+  src: url(fonts/Khula-Regular.ttf);
+  font-family: 'Khula';
+}
+
+
 body {
   font-size: 10 px;
   background: fixed blue url(img/night.jpg) center no-repeat;
@@ -11,6 +26,7 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  font-family: 'Khula', sans-serif;
   
 }
 
@@ -103,6 +119,7 @@ body {
   color: #fff;
   font-size: 1.1rem;
   overflow: hidden;
+  font-family: 'Indie Flower', sans-serif;
 }
 
 .clear {
