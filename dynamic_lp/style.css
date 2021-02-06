@@ -2,7 +2,6 @@
   src: url(fonts/Roboto-Regular.ttf);
   font-family: 'Roboto';
 }
-
 @font-face {
   src: url(fonts/IndieFlower-Regular.ttf);
   font-family: 'Indie Flower';
@@ -15,12 +14,11 @@
 
 body {
   font-size: 10 px;
-  background: fixed blue url(img/night.jpg) center no-repeat;
+  background: fixed blue url(img/day.jpg) center no-repeat;
   background-size: cover;
   /*width: 100 wv;*/
   height: 100vh;
-  margin: 0;
-  
+  margin: 0;  
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -39,30 +37,30 @@ body {
   width: 500px;
   height: 600px;
   background-color: rgba(66, 72, 90, 0.5);
-  border-radius: 50px;
+  border-radius: 30px;
   box-shadow: 5px 5px 7px rgba(41, 41, 41, 0.8);
-
 }
 
 
 .clock, .plan {   
-  width: 80%;  
+  width: 85%;  
   text-align: center;
 }
 
 .time {
   font-size: 7rem; 
-  color: white;
-  
+  color: white;  
 }
 
 .greeting {
   font-size: 2.2rem;
+  font-weight: 250;
   color: white;
 }
 
 .plan_question {
   font-size: 1.8rem;
+  font-weight: 250;
   color: white;  
 }
 
@@ -71,8 +69,9 @@ body {
   width: 100%;
   height: 50px;
   background-color: rgba(220, 219, 223, 0.6);
-  margin: 20px 0 0 0;
+  margin: 0px 0 0 0;
   font-size: 1.2rem;
+  border-radius: 5px;
 }
 
 .input:focus {
@@ -81,11 +80,12 @@ body {
 }
 
 .input_button {
-  margin: 30px 0 0 0;
+  margin: 10px 0 0 0;
   width: 100px;
   height: 40px;
   color: #fff;
   font-size: 1.1rem;
+  font-family: 'Khula', sans-serif;
   background-color: rgb(199, 140, 32);
   border: none;
   border-radius: 10px;
@@ -95,7 +95,7 @@ body {
   font-size: 1.3rem;
   background-color: rgb(230, 167, 51);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.1s;
 }
 
 
@@ -105,7 +105,7 @@ body {
   width: 300px;
   height: 600px;
   background-color: rgba(66, 72, 90, 0.5);
-  border-radius: 50px;
+  border-radius: 30px;
   box-shadow: 5px 5px 7px rgba(41, 41, 41, 0.8) ;
   display: flex;
   flex-direction: column;
@@ -115,7 +115,7 @@ body {
 
 .block_plans {
   width: 80%;
-  height: 400px;
+  height: 430px;
   color: #fff;
   font-size: 1.1rem;
   overflow: hidden;
@@ -128,6 +128,7 @@ body {
   height: 40px;
   color: #fff;
   font-size: 1.0rem;
+  font-family: 'Khula', sans-serif;
   background-color: rgb(199, 140, 32);
   border: none;
   border-radius: 10px;
