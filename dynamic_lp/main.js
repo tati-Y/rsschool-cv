@@ -1,7 +1,11 @@
 let time = document.querySelector('.time'),
-    greeting = document.querySelector('.greeting');
-    //name = prompt("Hi! What's your name?");
-
+    greeting = document.querySelector('.greeting'),
+    plansName = document.querySelector('.plans_name'),
+    plansText = document.querySelector('.plans_text'),
+    plan = document.querySelector('.input'),
+    planBtn = document.querySelector('.input_button'),
+    clearAllBtn = document.querySelector('.clear_all');
+    
 
 // show time
 function showTime() {
@@ -24,8 +28,7 @@ function addZero(n) {
 function changeBg() {
   let now = new Date(),
     hour = now.getHours();
-    //name = prompt("Hi! What's your name?");
-
+    
   if (hour < 4) {
     document.body.style.backgroundImage = "url(img/night.jpg)";        
   } else if (hour < 12) {
@@ -51,6 +54,7 @@ function showGreeting(n) {
       } else {
         greeting.textContent = `Good Evening, ${n[0].toUpperCase() + n.slice(1).toLowerCase()}!`;
       }  
+     
 }
 
 // set name to local storage
@@ -66,16 +70,58 @@ function setName() {
     name = localStorage.getItem('name');
   }
   
+  plansName.textContent = `${name[0].toUpperCase() + name.slice(1).toLowerCase()}'s plans:`;
+
   showGreeting(name);
 }
 
+// set plans to local storage
+function setPlans(n) {
+  
+      
+  if (plan.value === '') {
+    alert('write something!!!');
+  } else {    
+    localStorage.setItem(`plan${n}`, `${plan.value}`);
+    
+  }
+
+}
+
+/*planBtn.addEventListener('click', function(e) {
+  //e.target.value++;
+  setPlans(e.target.value); 
+  //planBtn.value = `${e.target.value + 1}`
+  planBtn.setAttribute('value', `${e.target.value + 1}`) 
+})*/
+
+planBtn.addEventListener('click', function(e) {
+ /* let n = planBtn.value;
+  setPlans(n); 
+  
+  planBtn.setAttribute('value', `${+n + 1}`) ;*/
+  
+    
+  e.target.value++;
+  
+  alert(planBtn.value);
+})
 
 
+// clear local storage
+function clearAll() {
+  localStorage.clear();
+  setName();
+}
 
+clearAllBtn.addEventListener('click', clearAll);
+
+//planBtn.addEventListener('click', setPlans);
 
 showTime();
 changeBg();
 setName();
+//setPlans();
 
 
 
