@@ -4,7 +4,8 @@ let time = document.querySelector('.time'),
     plansText = document.querySelector('.plans_text'),
     plan = document.querySelector('.input'),
     planBtn = document.querySelector('.input_button'),
-    clearAllBtn = document.querySelector('.clear_all');
+    clearAllBtn = document.querySelector('.clear_all'),
+    clearPlansBtn = document.querySelector('.clear_plans');
     
 
 // show time
@@ -62,7 +63,7 @@ function setName() {
   let name;
   if (localStorage.getItem('name') === null) {
     name = prompt("Hi! What's your name?");
-    if (name == null) {
+    if (name == null || name === '') {
       name = 'Friend';
     }
     localStorage.setItem('name', `${name[0].toUpperCase() + name.slice(1).toLowerCase()}`);
@@ -75,103 +76,54 @@ function setName() {
   showGreeting(name);
 }
 
-// set plans to local storage
-function setPlans(n) {
-  
-      
-  if (plan.value === '') {
-    alert('write something!!!');
-  } else {    
-    localStorage.setItem(`plan${n}`, `${plan.value}`);
-    
-  }
-
-}
-
-/*planBtn.addEventListener('click', function(e) {
-  //e.target.value++;
-  setPlans(e.target.value); 
-  //planBtn.value = `${e.target.value + 1}`
-  planBtn.setAttribute('value', `${e.target.value + 1}`) 
-})*/
-
-planBtn.addEventListener('click', function(e) {
- /* let n = planBtn.value;
-  setPlans(n); 
-  
-  planBtn.setAttribute('value', `${+n + 1}`) ;*/
-  
-    
-  e.target.value++;
-  
-  alert(planBtn.value);
-})
-
-
-// clear local storage
-function clearAll() {
-  localStorage.clear();
-  setName();
-}
-
-clearAllBtn.addEventListener('click', clearAll);
-
-//planBtn.addEventListener('click', setPlans);
-
 showTime();
 changeBg();
 setName();
-//setPlans();
 
+// set plans to local storage
+let ul = document.querySelector('ul');
 
+let plansArray = localStorage.getItem('plans') ? JSON.parse(localStorage.getItem('plans')) : [];
 
+localStorage.setItem('plans', JSON.stringify(plansArray));
 
+let data = JSON.parse(localStorage.getItem('plans'));
 
-// Get Name
-/*function getName() {
-  if (localStorage.getItem('name') === null) {
-    name.textContent = '[Enter Name]';
-  } else {
-    name.textContent = localStorage.getItem('name');
-  }
+function makeLi(text) {
+  const li = document.createElement('li');
+  li.textContent = text;
+  ul.appendChild(li);
 }
 
-// Set Name
-function setName(e) {
-  if (e.type === 'keypress') {
-    // Make sure enter is pressed
-    if (e.which == 13 || e.keyCode == 13) {
-      localStorage.setItem('name', e.target.innerText);
-      name.blur();
-    }
-  } else {
-    localStorage.setItem('name', e.target.innerText);
+planBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  plansArray.push(plan.value);
+  if (plansArray.length > 13) {
+    alert('Hey! Too many plans! Take it easy! ;)')
   }
-}
+  localStorage.setItem('plans', JSON.stringify(plansArray));
+  makeLi(plan.value);
+  plan.value = '';
+})
 
-// Get Focus
-function getFocus() {
-  if (localStorage.getItem('focus') === null) {
-    focus.textContent = '[Enter Focus]';
-  } else {
-    focus.textContent = localStorage.getItem('focus');
+data.forEach(item => {
+  makeLi(item);
+})
+
+// clear buttons
+clearAllBtn.addEventListener('click', function() {
+  localStorage.clear();
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
   }
-}
+  plansArray = [];
+  setName();
+})
 
-// Set Focus
-function setFocus(e) {
-  if (e.type === 'keypress') {
-    // Make sure enter is pressed
-    if (e.which == 13 || e.keyCode == 13) {
-      localStorage.setItem('focus', e.target.innerText);
-      focus.blur();
-    }
-  } else {
-    localStorage.setItem('focus', e.target.innerText);
+clearPlansBtn.addEventListener('click', function() {
+  localStorage.removeItem('plans');
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
   }
-}
-
-name.addEventListener('keypress', setName);
-name.addEventListener('blur', setName);
-focus.addEventListener('keypress', setFocus);
-focus.addEventListener('blur', setFocus);*/
+  plansArray = [];  
+})
