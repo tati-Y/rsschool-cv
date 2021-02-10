@@ -14,7 +14,7 @@
 
 body {
   font-size: 10 px;
-  background: fixed blue url(img/day.jpg) center no-repeat;
+  background: fixed url(img/day.jpg) center no-repeat;
   background-size: cover;
   /*width: 100 wv;*/
   height: 100vh;
@@ -140,3 +140,91 @@ body {
   cursor: pointer;
   transition: all 0.5s;
 }
+
+@media (min-width: 520px) and (max-width: 900px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;      
+    }
+  .container {
+    margin: 30px 0 20px 0;    
+  }
+  .plan-list {
+    margin: 0 0 30px 0;
+  }
+}
+
+
+@media (min-width: 380px) and (max-width: 519px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;      
+    }
+  .container {
+    margin: 20px 0 20px 0;
+    width: 350px;
+    height: 420px;
+  }
+  .plan-list {
+    margin: 0 0 20px 0;
+  }
+  .time {
+    font-size: 5rem; 
+  }  
+  .greeting {
+    font-size: 1.5rem;    
+  }  
+  .plan_question {
+    font-size: 1.3rem;    
+  }  
+  .input {
+    height: 35px;
+    font-size: 1.0rem;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 379px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;      
+    }
+  .container {
+    margin: 20px 0 20px 0;
+    width: 300px;
+    height: 360px;
+    border-radius: 20px;
+  }
+  .plan-list {
+    margin: 0 0 20px 0;
+  }
+  .time {
+    font-size: 4rem; 
+  }  
+  .greeting {
+    font-size: 1.3rem;    
+  }  
+  .plan_question {
+    font-size: 1.1rem;    
+  }  
+  .input {
+    height: 30px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+  }
+  .plan-list {
+    width: 300px;
+    height: 480px;
+    background-color: rgba(66, 72, 90, 0.5);
+    border-radius: 20px;    
+  }
+  .block_plans {
+    width: 80%;
+    height: 380px;    
+    font-size: 0.8rem;    
+  }  
+}
+  
