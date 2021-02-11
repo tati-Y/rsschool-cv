@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meditation App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    
+    <div class="background__container"></div>
+    <div class="video__container">
+      <audio src="audio/Jason Farnham - Celestial Orient.mp3"></audio>
+      <video src="video/smoke.mp4"></video>
+    </div>
+
+    <div class="time__display">
+      <h1 class="time">00:00</h1>
+    </div>    
+
+    <div class="time__buttons">
+      <button data-time="300" class="time__btn time_short">5 min</button>
+      <button data-time="600" class="time__btn time_medium">10 min</button>
+      <button data-time="1200" class="time__btn time_long">20 min</button>
+    </div>
+
+    <div class="music__buttons">
+      <button data-sound='/audio/Jason Farnham - Celestial Orient.mp3' data-video="/video/smoke.mp4" class="music__btn">
+        <p>Celestial Orient</p>       
+      </button>
+      <button data-sound='/audio/Brighter Note - Morning Meditation.mp3' data-video="/video/flower.mp4" class="music__btn">
+        <p>Morning Meditation</p>        
+      </button>
+      <button data-sound='/audio/Julian Scott - Feeling Chilled.mp3' data-video="/video/orange.mp4" class="music__btn">
+        <p>Feeling Chilled</p>        
+      </button>
+      <button data-sound='/audio/Anthony Alleeson - Atmospheres.mp3' data-video="/video/green.mp4" class="music__btn">
+        <p> Atmospheres</p>       
+      </button>
+      <button data-sound='/audio/Davinia Leonne - Immersion.mp3' data-video="/video/medusa.mp4" class="music__btn">
+        <p>Immersion</p>        
+      </button>
+    </div>
+
+  </div>  
+
+  <script src="main.js"></script>
+</body>
+</html>
