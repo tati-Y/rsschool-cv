@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meditation App</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,10 +15,8 @@
       <p>Meditation</p>
     </div> -->
     <div class="video__container">
-      <audio src="audio/Jason Farnham - Celestial Orient.mp3"></audio>
-      <video loop autoplay class="video" height="100vh">
-        <source src="./video/default-black.mp4" type="video/mp4">
-      </video>
+      <audio src="./audio/Jason Farnham - Celestial Orient.mp3" class="song"></audio>
+      <video src="./video/default-black.mp4" type="video/mp4" loop autoplay class="video" height="100vh"></video>
     </div>
 
     <div class="buttons__container">
@@ -39,19 +38,19 @@
       </div>
           
       <div class="music__buttons">
-        <button data-sound='/audio/Jason Farnham - Celestial Orient.mp3' data-video="/video/smoke.mp4" class="music__btn">
+        <button data-sound='./audio/Jason Farnham - Celestial Orient.mp3' data-video="./video/smoke.mp4" class="music__btn no_active">
           <p>Celestial Orient</p>       
         </button>
-        <button data-sound='/audio/Brighter Note - Morning Meditation.mp3' data-video="/video/flower.mp4" class="music__btn">
+        <button data-sound='./audio/Brighter Note - Morning Meditation.mp3' data-video="./video/flower.mp4" class="music__btn no_active">
           <p>Morning Meditation</p>        
         </button>
-        <button data-sound='/audio/Julian Scott - Feeling Chilled.mp3' data-video="/video/orange.mp4" class="music__btn">
+        <button data-sound='./audio/Julian Scott - Feeling Chilled.mp3' data-video="./video/orange.mp4" class="music__btn no_active">
           <p>Feeling Chilled</p>        
         </button>
-        <button data-sound='/audio/Anthony Alleeson - Atmospheres.mp3' data-video="/video/green.mp4" class="music__btn">
+        <button data-sound='./audio/Anthony Alleeson - Atmospheres.mp3' data-video="./video/green.mp4" class="music__btn no_active">
           <p> Atmospheres</p>       
         </button>
-        <button data-sound='/audio/Davinia Leonne - Immersion.mp3' data-video="/video/medusa.mp4" class="music__btn">
+        <button data-sound='./audio/Davinia Leonne - Immersion.mp3' data-video="./video/medusa.mp4" class="music__btn no_active">
           <p>Immersion</p>        
         </button>
       </div>
