@@ -1,84 +1,41 @@
 let song = document.querySelector('.song'),
     video = document.querySelector('.video'),
     musicBtn = document.querySelectorAll(".music__btn"),
-    musicBox = document.querySelector(".music__buttons");
+    musicBox = document.querySelector(".music__buttons"),
+    text = document.querySelector(".text"),
+    videoDefault = "./video/default-black.mp4",
+    timeBtn = document.querySelectorAll(".time__btn"),
+    timeBox = document.querySelector(".time__buttons"),
+    totalTimeSec = 1200,
+    timeDisplay = document.querySelector(".time");
 
     //console.log(video.src);
 
-   
-    
-// change music and video
-
-    /*musicBtn.forEach(sound => {
-     sound.addEventListener("click", function() {
-        song.src = this.getAttribute("data-sound");
-        video.src = this.getAttribute("data-video");        
-        checkPlaying();
-      });
-    });*/
-
-   /*musicBtn.forEach(sound => {
-      
-        if (sound.classList.contains('active')) {
-          song.src = e.target.getAttribute("data-sound");
-         video.src = e.target.getAttribute("data-video");        
-         checkPlaying();           
-        }
-      });       
-    
-     
-
-    function checkPlaying()  {
-      song.play();
+   /*function musicDefault() {
+           video.src = videoDefault;
       video.play();
-    }*/
-// show active music button
+     }      
+   
+   //musicDefault();
 
-   /* function addBtnsClickHandler() {
-      musicBox.addEventListener('click', (e) => {
-        if (e.target.classList.contains('music__btn')) {
-          let clickedBtn = e.target;
-          removeSelectedBtn();
-          selectClickedBtn(clickedBtn);      
-        }
-      });
-    }    
-
-    function removeSelectedBtn() {     
-     musicBtn.forEach(tag => {
-        tag.classList.remove('active'); 
-        tag.classList.add('no_active');            
-      });
-    }
-      
-
-    function selectClickedBtn(clickedBtn) {      
-      clickedBtn.classList.add('active');
-      clickedBtn.classList.remove('no_active');
-    }*/
+   document.addEventListener("DOMContentLoaded", musicDefault);*/
     
-    /*function addBtnsClickHandler() {
-      musicBox.addEventListener('click', (e) => {
-        removeSelectedBtn();
-        if (e.target.classList.contains('music__btn')) {
-          e.target.classList.toggle('active');
-          e.target.classList.toggle('no_active');
-          console.log(e.target.classList);
-        }
-      });
-    }  */ 
+// select music and video    
 
     function addBtnsClickHandler() {
-      musicBox.addEventListener('click', (e) => {        
+      musicBox.addEventListener('click', (e) => { 
+        e.preventDefault();       
         if (e.target.classList.contains('no_active')) {
           removeSelectedBtn();
-          e.target.classList.remove('no_active'); 
+          e.target.classList.remove('no_active');           
           e.target.classList.add('active');
+          text.style.display = "none";
           selectMusic(e.target);                 
         } 
         else {
           e.target.classList.remove('active'); 
-          e.target.classList.add('no_active');                   
+          e.target.classList.add('no_active'); 
+          selectDefaultMusic();                  
         }          
       });
     } 
@@ -88,22 +45,104 @@ let song = document.querySelector('.song'),
          tag.classList.remove('active'); 
          tag.classList.add('no_active');            
        });
-     } 
+    } 
 
     function selectMusic(m) {
         song.src = m.getAttribute("data-sound");
         video.src = m.getAttribute("data-video");        
-        checkPlaying();
-     }
-
-    function checkPlaying()  {
-      song.play();
-      video.play();
+        //checkPlaying();
+        song.play();
+        video.play();
     }
 
+    /*function checkPlaying()  {
+      song.play();
+      video.play();
+    }*/
+
+    function selectDefaultMusic() {
+      video.src = videoDefault;
+      text.style.display = "block";
+      video.play();
+      song.pause()
+    }
 
     addBtnsClickHandler();
     
+// select time
+
+  function addBtnsTimeClickHandler() {
+    timeBox.addEventListener('click', (e) => { 
+      e.preventDefault();       
+      if (e.target.classList.contains('time_no_active')) {
+        removeSelectedBtnTime();
+        e.target.classList.remove('time_no_active');           
+        e.target.classList.add('time_active');
+        
+        showTimeDisplay(e.target);                 
+      } 
+      else {
+        e.target.classList.remove('time_active'); 
+        e.target.classList.add('time_no_active');                     
+      }          
+    });
+  } 
+
+  function removeSelectedBtnTime() {     
+    timeBtn.forEach(tag => {
+      tag.classList.remove('time_active'); 
+      tag.classList.add('time_no_active');            
+    });
+  } 
+
+  /*function selectMusic(m) {
+      song.src = m.getAttribute("data-sound");
+      video.src = m.getAttribute("data-video");        
+      //checkPlaying();
+      song.play();
+      video.play();
+  }  
+  */
+
+  addBtnsTimeClickHandler();
+
+// time display
+
+   function showTimeDisplay(t) {
+    totalTimeSec = t.getAttribute("data-time");
+    timeDisplay.textContent = `${Math.floor(totalTimeSec / 60)}:${addZero(Math.floor(totalTimeSec % 60))}`;
+  } 
+
+  function addZero(z) {    
+      return (+z < 10) ? '0' + z : z;    
+  }
+
+
+
+  song.ontimeupdate = function() {
+    let currentTime = song.currentTime;
+    let elapsed = totalTimeSec - currentTime;
+    let seconds = Math.floor(elapsed % 60);
+    let minutes = Math.floor(elapsed / 60);
+    timeDisplay.textContent = `${minutes}:${addZero(seconds)}`;
+    //let progress = outlineLength - (currentTime / fakeDuration) * outlineLength;
+   // outline.style.strokeDashoffset = progress;
+   //console.log(song.duration);
+  
+    /*if (currentTime >= totalTimeSec) {
+      song.pause();
+      song.currentTime = 0;
+      play.src = "./svg/play.svg";
+      video.pause();
+    }*/
+  };
+
+
+
+
+
+
+
 
 
       /*if (song.paused) {
@@ -117,31 +156,7 @@ let song = document.querySelector('.song'),
       }*/
     
 
-
-    /*const addTagsClickHandler = () => {
-      document.querySelector('.portfolio__tags').addEventListener('click', (e) => {
-        if (e.target.classList.contains('tag')) {
-          let clickedTag = e.target;
-          removeSelectedTag();
-          selectClickedTag(clickedTag);      
-        }    
-      })
-    }
-    
-    const removeSelectedTag = () => {
-      let tags = document.querySelectorAll('.portfolio__tags .tag');
-      tags.forEach(tag => {
-        tag.classList.remove('tag_selected');
-        tag.classList.add('tag_bordered');    
-      })
-    }
-    
-    const selectClickedTag = (clickedTag) => {
-      clickedTag.classList.remove('tag_bordered');
-      clickedTag.classList.add('tag_selected');
-    }
-    
-    addTagsClickHandler();*/
+   
 
 
 

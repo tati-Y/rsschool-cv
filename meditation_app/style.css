@@ -66,8 +66,9 @@
   width: 300px;
   height: 60px;  
   background-color: rgba(36, 35, 35, 0.5);
-  box-shadow: 0 5px 10px rgba(194, 131, 165, 0.6);
+  /*box-shadow: 0 5px 10px rgba(194, 131, 165, 0.6);*/
   border-radius: 0 0 10px 10px;  
+  border: 1px solid rgba(233, 12, 104, 0.4);
   z-index: 10;
 }
 
@@ -90,26 +91,21 @@
 }
 
 .time__btn {
-  width: 33%;
-  height: 60px;
+  width: 33%;  
   border-radius: 0 0 10px 10px;
   border: none;
-  outline: none;
-  background-color: rgba(36, 35, 35, 0.5);
+  outline: none;  
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
   font-weight: 500;
-  box-shadow: 0 5px 15px rgba(194, 131, 165, 0.6);
+  /*box-shadow: 0 5px 15px rgba(194, 131, 165, 0.6);*/
+  border: 1px solid rgba(233, 12, 104, 0.4);
 }
 
 .time__btn:hover {
   height: 70px;
-  background-color: rgba(233, 12, 104, 0.4);
+  background-color: rgba(233, 12, 104, 0.6);
 
-}
-
-.time__btn:active {
-  background-color: rgba(233, 12, 104, 0.3);  
 }
 
 .text {  
@@ -139,23 +135,34 @@
   outline: none;
   border: none;  
   color: rgb(255, 255, 255);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 500;  
-  box-shadow: 0 0 15px rgba(194, 131, 165, 0.6);
+  /*box-shadow: 0 0 15px rgba(194, 131, 165, 0.6);*/
+  border: 1px solid rgba(233, 12, 104, 0.4);
   border-radius: 10px 10px 0 0;
 }
 
 .music__btn:hover {
   height: 80px;
-  background-color: rgba(233, 12, 104, 0.4);
+  background-color: rgba(233, 12, 104, 0.6);
 }
 
 .active {
-  background-color: rgb(248, 120, 191, 0.4);
+  background-color: rgba(233, 12, 104, 0.6);
   height: 80px;
 }
 
 .no_active {
   background-color: rgba(36, 35, 35, 0.5);
   height: 70px;
+}
+
+.time_active {
+  background-color: rgba(233, 12, 104, 0.6);
+  height: 70px;
+}
+
+.time_no_active {
+  background-color: rgba(36, 35, 35, 0.5);
+  height: 60px;
 }
