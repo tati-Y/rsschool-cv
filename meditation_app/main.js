@@ -6,20 +6,10 @@ let song = document.querySelector('.song'),
     videoDefault = "./video/default-black.mp4",
     timeBtn = document.querySelectorAll(".time__btn"),
     timeBox = document.querySelector(".time__buttons"),
-    totalTimeSec = 1200,
+    totalTimeSec = 300,
     timeDisplay = document.querySelector(".time");
 
-    //console.log(video.src);
-
-   /*function musicDefault() {
-           video.src = videoDefault;
-      video.play();
-     }      
-   
-   //musicDefault();
-
-   document.addEventListener("DOMContentLoaded", musicDefault);*/
-    
+        
 // select music and video    
 
     function addBtnsClickHandler() {
@@ -30,7 +20,8 @@ let song = document.querySelector('.song'),
           e.target.classList.remove('no_active');           
           e.target.classList.add('active');
           text.style.display = "none";
-          selectMusic(e.target);                 
+          selectMusic(e.target); 
+          changeTime(0, totalTimeSec, e.target);                
         } 
         else {
           e.target.classList.remove('active'); 
@@ -52,26 +43,24 @@ let song = document.querySelector('.song'),
         video.src = m.getAttribute("data-video");        
         //checkPlaying();
         song.play();
-        video.play();
+        video.play();               
     }
-
-    /*function checkPlaying()  {
-      song.play();
-      video.play();
-    }*/
-
+    
     function selectDefaultMusic() {
       video.src = videoDefault;
       text.style.display = "block";
       video.play();
-      song.pause()
+      song.pause();
+      clearTime();      
     }
 
     addBtnsClickHandler();
+    selectDefaultMusic();
     
 // select time
 
   function addBtnsTimeClickHandler() {
+    clearTime();
     timeBox.addEventListener('click', (e) => { 
       e.preventDefault();       
       if (e.target.classList.contains('time_no_active')) {
@@ -81,10 +70,10 @@ let song = document.querySelector('.song'),
         
         showTimeDisplay(e.target);                 
       } 
-      else {
+     /* else {
         e.target.classList.remove('time_active'); 
         e.target.classList.add('time_no_active');                     
-      }          
+      } */         
     });
   } 
 
@@ -94,17 +83,9 @@ let song = document.querySelector('.song'),
       tag.classList.add('time_no_active');            
     });
   } 
-
-  /*function selectMusic(m) {
-      song.src = m.getAttribute("data-sound");
-      video.src = m.getAttribute("data-video");        
-      //checkPlaying();
-      song.play();
-      video.play();
-  }  
-  */
-
+  
   addBtnsTimeClickHandler();
+
 
 // time display
 
@@ -113,48 +94,59 @@ let song = document.querySelector('.song'),
     timeDisplay.textContent = `${Math.floor(totalTimeSec / 60)}:${addZero(Math.floor(totalTimeSec % 60))}`;
   } 
 
-  function addZero(z) {    
+   function addZero(z) {    
       return (+z < 10) ? '0' + z : z;    
   }
 
+   function changeTime(from, to, m) {    
+    let current = from;
 
+    let timerId = setInterval(function() {
+      let elapsed = totalTimeSec - current;
+      let seconds = Math.floor(elapsed % 60);
+      let minutes = Math.floor(elapsed / 60);
+      timeDisplay.textContent = `${minutes}:${addZero(seconds)}`;
+      if (current == to || m.classList.contains('no_active')) {
+        clearInterval(timerId);
 
-  song.ontimeupdate = function() {
-    let currentTime = song.currentTime;
-    let elapsed = totalTimeSec - currentTime;
-    let seconds = Math.floor(elapsed % 60);
-    let minutes = Math.floor(elapsed / 60);
-    timeDisplay.textContent = `${minutes}:${addZero(seconds)}`;
-    //let progress = outlineLength - (currentTime / fakeDuration) * outlineLength;
-   // outline.style.strokeDashoffset = progress;
-   //console.log(song.duration);
-  
-    /*if (currentTime >= totalTimeSec) {
-      song.pause();
-      song.currentTime = 0;
-      play.src = "./svg/play.svg";
-      video.pause();
-    }*/
-  };
-
-
-
-
-
-
-
-
-
-      /*if (song.paused) {
-        song.play();
-        video.play();
-        play.src = "./svg/pause.svg";
-      } else {
-        song.pause();
+        clearTime();          
+        m.classList.remove('active'); 
+        m.classList.add('no_active');  
         video.pause();
-        play.src = "./svg/play.svg";
-      }*/
+        song.pause();        
+        selectDefaultMusic();
+      }
+      current++;
+      }, 1000);
+    }
+
+    function clearTime() {   
+      timeBtn.forEach(tag => {
+        if (tag.classList.contains('time_active')) {
+          totalTimeSec = tag.getAttribute("data-time");
+          timeDisplay.textContent = `${Math.floor(totalTimeSec / 60)}:${addZero(Math.floor(totalTimeSec % 60))}`;
+        } 
+      });
+    }    
+   
     
+
+    
+
+  /*function printNumbers(from, to) {
+    let current = from;
+  
+    let timerId = setInterval(function() {
+      alert(current);
+      if (current == to) {
+        clearInterval(timerId);
+      }
+      current++;
+    }, 1000);
+  }
+  
+  // использование:
+  printNumbers(5, 10);*/   
 
    
 
