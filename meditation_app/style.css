@@ -263,6 +263,33 @@
   
 }
 
+@media (min-width: 380px) and (max-width: 699px) and (orientation: landscape) {
+  .active {       
+    height: 60px;  
+  }
+  
+  .no_active {    
+    height: 50px;
+  }
+  
+  .time_active {    
+    height: 50px;    
+  }
+  
+  .time_no_active {    
+    height: 40px;
+  }  
+  .music__btn {      
+    font-size: 0.7rem;    
+    border-radius: 5px 5px 5px 5px; 
+  } 
+  .time__btn {      
+    border-radius: 0 0 5px 5px;    
+    font-size: 1.0rem; 
+  } 
+}
+
+
 @media (min-width: 320px) and (max-width: 379px) {
   .wrapper {    
     width: 100vw;     
@@ -339,4 +366,29 @@
     height: 40px;
   }  
   
+}
+@media (min-width: 320px) and (max-width: 379px) and (orientation: landscape) {
+  .active {       
+    height: 60px;  
+  }
+  
+  .no_active {    
+    height: 50px;
+  }
+  
+  .time_active {    
+    height: 50px;    
+  }
+  
+  .time_no_active {    
+    height: 40px;
+  }  
+  .music__btn {      
+    font-size: 0.7rem;    
+    border-radius: 5px 5px 5px 5px; 
+  } 
+  .time__btn {      
+    border-radius: 0 0 5px 5px;    
+    font-size: 1.0rem; 
+  } 
 }
