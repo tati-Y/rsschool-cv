@@ -12,18 +12,21 @@ window.addEventListener('keydown', (e) => {
 
 //click
 window.addEventListener('click', (e) => {
-  e.target.classList.add('active');  
-  let k = e.target.getAttribute("data-key"); 
-  let audios = document.querySelectorAll('audio');
-  let sound = document.querySelector('.sound');
+  if (e.target.classList.contains('key')) {
+    e.target.classList.add('active');  
+    let k = e.target.getAttribute("data-key"); 
+    let audios = document.querySelectorAll('audio');
+    let sound = document.querySelector('.sound');
 
-  audios.forEach(tag => {         
-     if (tag.getAttribute("data-key") === k) {
-       sound.src = tag.getAttribute("data-sound");
-       sound.play();     }     
-     });  
+    audios.forEach(tag => {         
+      if (tag.getAttribute("data-key") === k) {
+        sound.src = tag.getAttribute("data-sound");
+        sound.play(); 
+      }     
+      });  
 
-  setTimeout(removeSelectedBtn, 500);
+    setTimeout(removeSelectedBtn, 500);
+  } 
 });
 
 function removeSelectedBtn() {     
