@@ -1,0 +1,106 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  height: 100vh;
+  background-color: rgb(252, 239, 224);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.container__image {
+  width: 500px;
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  box-shadow: 0 0 10px black;
+}
+
+.container__controls {
+  width: 500px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0 0 0;
+}
+
+.inputs {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.input {
+  width: 300px; 
+}
+
+.buttons {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+}
+
+.button_size {
+  background-image: url(img/iconmonstr-fullscreen-12-64.png);
+  background-size: contain;
+}
+
+.button_background {
+  background-image: url(img/iconmonstr-paint-bucket-10-64.png);
+  background-size: contain;
+}
+
+.button_brightness {
+  background-image: url(img/iconmonstr-brightness-4-64.png);
+  background-size: contain;
+}
+
+.button_blur {
+  background-image: url(img/iconmonstr-triangle-2-64.png);
+  background-size: contain;
+}
+
+.button_saturation {
+  background-image: url(img/iconmonstr-drop-2-64.png);
+  background-size: contain;
+}
+
+.button_contrast {
+  background-image: url(img/iconmonstr-brightness-11-64.png);
+  background-size: contain;
+}
+
+.hidden {
+  display: none;
+}
