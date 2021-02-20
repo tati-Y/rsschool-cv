@@ -1,7 +1,7 @@
 .wrapper {
   margin: 0 auto;
   padding: 0;
-  background: fixed red url(img/bg3.jpg) center no-repeat;  
+  background: fixed rgb(232, 218, 248) url(img/bg3.jpg) center no-repeat;  
   background-size: cover;
   height: 100vh;
   display: flex;
