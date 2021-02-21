@@ -1,0 +1,59 @@
+@font-face {
+  src: url(fonts/MarckScript-Regular.ttf);
+  font-family: 'Marck', cursive;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;  
+  font-family: 'helvetica neue';
+  font-size: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Marck', cursive, Arial, sans-serif;
+  font-style: italic;
+
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {  
+  color: white;
+  text-align: center;
+  align-items: center;
+  font-size: 2rem;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+}
+
+.panel1 { background-image:url(img/1.jpg); }
+.panel2 { background-image:url(img/2.jpg); }
+.panel3 { background-image:url(img/3.jpg); }
+
+.text {
+  background-color: rgba(8, 124, 37, 0.3);
+  padding: 10px;
+  width: 100%;
+} 
+
+.open {
+  flex: 5;
+  font-size: 4rem;
+}
+
+@media (min-width: 320px) and (max-width: 670px) {
+  .panel {  
+        font-size: 1.3rem;
+  }
+  .open {    
+    font-size: 2rem;
+  }
+}
