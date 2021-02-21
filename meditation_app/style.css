@@ -50,7 +50,6 @@
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-
 }
 
 .time__container {
@@ -265,7 +264,7 @@
 
 @media (min-width: 380px) and (max-width: 699px) and (orientation: landscape) {
   .active {       
-    height: 60px;  
+    height: 50px;  
   }
   
   .no_active {    
@@ -273,7 +272,7 @@
   }
   
   .time_active {    
-    height: 50px;    
+    height: 40px;    
   }
   
   .time_no_active {    
@@ -369,7 +368,7 @@
 }
 @media (min-width: 320px) and (max-width: 379px) and (orientation: landscape) {
   .active {       
-    height: 60px;  
+    height: 50px;  
   }
   
   .no_active {    
@@ -377,7 +376,7 @@
   }
   
   .time_active {    
-    height: 50px;    
+    height: 40px;    
   }
   
   .time_no_active {    
