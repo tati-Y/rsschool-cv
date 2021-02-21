@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Variables and JS</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+
+      <div class="container__image">
+        <img src="img/broadhurst.jpg" >
+      </div>
+
+      <div class="container__controls">
+
+        <div class="inputs">
+
+          <div data-prop="size" class="input hidden">
+            <label>Size:
+              <input type="range" name="size" min="20" max="100" value="50" data-sizing="%">
+            </label><br>
+          </div>
+
+          <div data-prop="background" class="input hidden">
+            <label>Background:
+              <input type="color" name="base" value="#ffffff">
+            </label><br>
+          </div>
+
+          <div data-prop="brightness" class="input shown">
+            <label>Brightness:
+              <input type="range" name="brightness" min="10" max="200" value="100" data-sizing="%">
+            </label><br>
+          </div>
+
+          <div data-prop="blur" class="input hidden">
+            <label>Blur:
+              <input type="range" name="blur" min="0" max="6" value="0" data-sizing="px">
+            </label><br>
+          </div>
+
+          <div data-prop="saturation" class="input hidden">
+            <label>Saturation:
+              <input type="range" name="saturate" min="0" max="100" value="100" data-sizing="%">
+            </label><br>
+          </div>
+
+          <div data-prop="contrast" class="input hidden">
+            <label>Contrast:
+              <input type="range" name="contrast" min="20" max="200" value="100" data-sizing="%">
+            </label><br>
+          </div>
+
+        </div>
+
+        <div class="buttons">
+          <div data-prop="size" class="button button_size"></div>
+          <div data-prop="background" class="button button_background"></div>
+          <div data-prop="brightness" class="button button_brightness"></div>
+          <div data-prop="blur" class="button button_blur"></div>
+          <div data-prop="saturation" class="button button_saturation"></div>
+          <div data-prop="contrast" class="button button_contrast"></div>
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>  
+</body>
+</html>
